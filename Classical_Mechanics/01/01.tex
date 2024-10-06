@@ -1,0 +1,117 @@
+\section{Mechanics of a Particle}
+
+Let \(r\) be the radius vector of a particle from some given origin and \(v\) its vector velocity:
+\begin{equation}
+    \symbf{v}=\odv{\symbf{r}}{t}.
+\end{equation}
+The \emph{linear momentum} \(\symbf{p}\) of the particle is defined as the product of the particle mass and its velocity:
+\begin{equation}
+    \symbf{p}=m\symbf{v}
+\end{equation}
+In consequence of interactions with external objects and fields, the particle may experience forces of various types, e.g., gravitational or electrodynamic; the vector sum of these forces exerted on the particle is the total force \(\symbf{F}\). The mechanics of the particle is contained in \emph{Newton's second law of motion}, which states that there exist frames of reference in which the motion of the particle is described by the differential equation
+\begin{equation}
+    \symbf{F}=\odv{\symbf{p}}{t}\equiv\dot{\symbf{p}},\label{eq:1.3}
+\end{equation}
+or
+\begin{equation}
+    \symbf{F}=\odv*{\left(m\symbf{v}\right)}{t}.\label{eq:1.4}
+\end{equation}
+In most instances, the mass of the particle is constant and Eq.~\eqref{eq:1.4} reduces to
+\begin{equation}
+    \symbf{F}=m\odv{\symbf{v}}{t}=m\symbf{a},
+\end{equation}
+where \(\symbf{a}\) is the vector acceleration of the particle defined by
+\begin{equation}
+    \symbf{a}=\odv*[2]{\symbf{r}}{t}.
+\end{equation}
+The equation of motion is thus a differential equation of second order, assuming \(\symbf{F}\) does not depend on higher-order derivatives.
+
+A reference frame in which Eq.~\eqref{eq:1.3} is valid is called an \emph{inertial} or \emph{Galilean system}. Even within classical mechanics the notion of an inertial system is some- thing of an idealization. In practice, however, it is usually feasible to set up a co- ordinate system that comes as close to the desired properties as may be required. For many purposes, a reference frame fixed in Earth (the ``laboratory system") is a sufficient approximation to an inertial system, while for some astronomical purposes it may be necessary to construct an inertial system (or inertial frame) by reference to distant galaxies.
+
+Many of the important conclusions of mechanics can be expressed in the form of conservation theorems, which indicate under what conditions various mechanical quantities are constant in time. Equation~\eqref{eq:1.3} directly furnishes the first of these, the
+\begin{theorem}[Conservation Theorem for the Linear Momentum of a Particle]
+    If the total force, \(\symbf{F}\), is zero, then \(\dot{\symbf{p}}=0\) and the linear momentum, \(\symbf{p}\), is conserved.
+\end{theorem}
+
+The angular momentum of the particle about point \(O\), denoted by \(\symbf{L}\), is defined as
+\begin{equation}
+    \symbf{L}=\symbf{r}\times\symbf{p},
+\end{equation}
+where \(\symbf{r}\) is the radius vector from \(O\) to the particle. Notice that the order of the factors is important. We now define the \emph{moment of force} or \emph{torque} about \(O\) as
+\begin{equation}
+    \symbf{N}=\symbf{r}\times\symbf{F}.
+\end{equation}
+The equation analogous to \eqref{eq:1.3} for \(\symbf{N}\) is obtained by forming the cross product of \(\symbf{r}\) with Eq.~\eqref{eq:1.4}:
+\begin{equation}
+    \symbf{r}\times\symbf{F}=\symbf{N}=\symbf{r}\times\odv*{\left(m\symbf{v}\right)}{t}.\label{eq:1.9}
+\end{equation}
+Equation~\eqref{eq:1.9} can be written in a different form by using the vector identity:
+\begin{equation}
+    \odv*{\left(\symbf{r}\times m\symbf{v}\right)}{t}=\symbf{v}\times m\symbf{v}+\symbf{r}\times\odv*{\left(m\symbf{v}\right)}{t},\label{eq:1.10}
+\end{equation}
+where the first term on the right obviously vanishes. In consequence of this identity, Eq.~\eqref{eq:1.9} takes the form
+\begin{equation}
+    \symbf{N}=\odv*{\left(\symbf{r}\times m\symbf{v}\right)}{t}=\odv{\symbf{L}}{t}\equiv\dot{\symbf{L}}.\label{eq:1.11}
+\end{equation}
+Note that both \(\symbf{N}\) and \(\symbf{L}\) depend on the point \(O\), about which the moments are taken.
+
+As was the case for Eq.~\eqref{eq:1.3}, the torque equation, \eqref{eq:1.11}, also yields an immediate conservation theorem, this time the
+\begin{theorem}[Conservation Theorem for the Angular Momentum of a Particle]
+    If the total torque, \(\symbf{N}\), is zero then \(\dot{\symbf{L}}=0\), and the angular momentum \(\symbf{L}\) is conserved.
+\end{theorem}
+
+Next consider the work done by the external force \(\symbf{F}\) upon the particle in going from point \(1\) to point \(2\). By definition, this work is
+\begin{equation}
+    W_{12}=\int_1^2\symbf{F}\cdot\odif{\symbf{s}}.\label{eq:1.12}
+\end{equation}
+For constant mass (as will be assumed from now on unless otherwise specified), the integral in Eq.~\eqref{eq:1.12} reduces to
+\begin{equation*}
+    \int\symbf{F}\cdot\odif{\symbf{s}}=m\int\odv{\symbf{v}}{t}\cdot\symbf{v}\odif{t}=\frac{m}{2}\int\odv*{\left(v^2\right)}{t}\odif{t},
+\end{equation*}
+and therefore
+\begin{equation}
+    W_{12}=\frac{m}{2}\left(v_2^2-v_1^2\right).
+\end{equation}
+The scalar quantity \(\rfrac{mv^2}{2}\) is called the kinetic energy of the particle and is denoted by \(T\), so that the work done is equal to the change in the kinetic energy:
+\begin{equation}
+    W_{12}=T_2-T_1.\label{eq:1.14}
+\end{equation}
+
+If the force field is such that the work \(W_{12}\) is the same for any physically possible path between points \(1\) and \(2\), then the force (and the system) is said to be \emph{conservative}. An alternative description of a conservative system is obtained by imagining the particle being taken from point \(1\) to point \(2\) by one possible path and then being returned to point \(1\) by another path. The independence of \(W_{12}\) on the particular path implies that the work done around such a closed circuit is zero, i.e.:
+\begin{equation}
+    \oint\symbf{F}\cdot\odif{\symbf{s}}=0.
+\end{equation}
+Physically it is clear that a system cannot be conservative if friction or other dissipation forces are present, because \(\symbf{F}\cdot\odif{\symbf{s}}\) due to friction is always positive and the integral cannot vanish.
+
+By a well-known theorem of vector analysis, a necessary and sufficient condition that the work, \(W_{12}\), be independent of the physical path taken by the particle is that \(\symbf{F}\) be the gradient of some scalar function of position:
+\begin{equation}
+    \symbf{F}=-\nabla V\left(\symbf{r}\right),\label{eq:1.16}
+\end{equation}
+where \(V\) is called the \emph{potential}, or \emph{potential energy}. The existence of \(V\) can be inferred intuitively by a simple argument. If \(W_{12}\) is independent of the path of integration between the end points \(1\) and \(2\), it should be possible to express \(W_{12}\) as the change in a quantity that depends only upon the positions of the end points. This quantity may be designated by \(-V\), so that for a differential path length we have the relation
+\begin{equation*}
+    \symbf{F}\cdot\odif{\symbf{s}}=-\odif{V}
+\end{equation*}
+or
+\begin{equation*}
+    F_s=-\pdv{V}{s},
+\end{equation*}
+which is equivalent to Eq.~\eqref{eq:1.16}. Note that in Eq.~\eqref{eq:1.16} we can add to \(V\) any quantity constant in space, without affecting the results. Hence \emph{the zero level of \(V\) is arbitrary}.
+
+For a conservative system, the work done by the forces is
+\begin{equation}
+    W_{12}=V_1-V_2.\label{eq:1.17}
+\end{equation}
+Combining Eq.~\eqref{eq:1.17} with Eq.~\eqref{eq:1.14}, we have the result
+\begin{equation}
+    T_1+V_1=T_2+V_2,\label{eq:1.18}
+\end{equation}
+which states in symbols the
+\begin{theorem}[Energy Conservation Theorem for a Particle]
+    If the forces acting on a particle are conservative, then the total energy of the particle, \(T+V\), is conserved.
+\end{theorem}
+
+The force applied to a particle may in some circumstances be given by the gradient of a scalar function that depends explicitly on both the position of the particle and the time. However, the work done on the particle when it travels a distance \(\odif{s}\),
+\begin{equation*}
+    \symbf{F}\cdot\odif{\symbf{s}}=-\pdv{V}{s}\odif{s},
+\end{equation*}
+is then no longer the total change in \(-V\) during the displacement, since \(V\) also changes explicitly with time as the particle moves. Hence, the work done as the particle goes from point \(1\) to point \(2\) is no longer the difference in the function V between those points. While a total energy \(T+V\) may still be defined, it is not conserved during the course of the particle's motion.
