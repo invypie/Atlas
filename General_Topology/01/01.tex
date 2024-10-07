@@ -1,0 +1,38 @@
+\section{Topologies and Neighborhoods}
+
+A \emph{topology} is a family \(\symcal{T}\) of sets which satisfies the two conditions: the intersection of any two members of \(\symcal{T}\) is a member of \(\symcal{T}\), and the union of the members of each subfamily of \(\symcal{T}\) is a member of \(\symcal{T}\). The set \(X=\bigcup\set{U}[U\in\symcal{T}]\) is necessarily a member of \(\symcal{T}\) because \(\symcal{T}\) is a subfamily of itself, and every member of \(\symcal{T}\) is a subset of \(X\). The set \(X\) is called the \emph{space} of the topology \(\symcal{T}\) and \(\symcal{T}\) is a \emph{topology for \(X\)}. The pair \(\left(X,\symcal{T}\right)\) is a \emph{topological space}. When no confusion seems possible we may forget to mention the topology and write ``\(X\) is a topological space." We shall be explicit in cases where precision is necessary (for example if we are considering two different topologies for the same set \(X\)).
+
+The members of the topology \(\symcal{T}\) are called \emph{open} relative to \(\symcal{T}\), or \(\symcal{T}\)-open, or if only one topology is under consideration, simply open sets. The space \(X\) of the topology is always open, and the void set is always open because it is the union of the members of the void family. These may be the only open sets, for the family whose only members are \(X\) and the void set is a topology for \(X\). This is not a very interesting topology, but it occurs frequently enough to deserve a name; it is called the \emph{indiscrete} (or \emph{trivial}) topology for \(X\), and \(\left(X,\symcal{T}\right)\) is then an \emph{indiscrete topological space}. At the other extreme is the family of all subsets of \(X\) which is the \emph{discrete} topology for \(X\) (then \(\left(X,\symcal{T}\right)\) is a \emph{discrete topological space}). If \(\symcal{T}\) is the discrete topology, then every subset of the space is open.
+
+The discrete and the indiscrete topology for a set \(X\) are spectively the largest and the smallest topology for \(X\). That is, every topology for \(X\) is contained in the discrete topology and contains the indiscrete topology. If \(\symcal{T}\) and \(\symcal{U}\) are topologies for \(X\), then, following the convention for arbitrary families of sets, \(\symcal{T}\) is smaller than \(\symcal{U}\) and \(\symcal{U}\) is larger than \(\symcal{T}\) iff \(\symcal{T}\subset\symcal{U}\). In other words, \(\symcal{T}\) is smaller than \(\symcal{U}\) iff each \(\symcal{T}\)-open set is \(\symcal{U}\)-open. In this case it is also said that \(\symcal{T}\) is \emph{coarser} than \(\symcal{U}\) and \(\symcal{U}\) is \emph{finer} than \(\symcal{T}\). (Unfortunately, this situation is described in the literature by both of the statements: \(\symcal{T}\) is \emph{stronger} than \(\symcal{U}\) and \(\symcal{T}\) is \emph{weaker} than \(\symcal{U}\).) If \(\symcal{T}\) and \(\symcal{U}\) are arbitrary topologies for \(X\) it may happen that \(\symcal{T}\) is neither larger nor smaller than \(\symcal{U}\); in this case, following the usage for partial orderings, it is said that \(\symcal{T}\) and \(\symcal{U}\) are not \emph{comparable}.
+
+The set of real numbers, with an appropriate topology, is a very interesting topological space. This is scarcely surprising since the notion of a topological space is an abstraction of some interesting properties of the real numbers. The \emph{usual topology} for the real numbers is the family of all those sets which contain an A open interval about each of their points. That is, a subset \(A\) of the set of real numbers is open iff for each member \(x\) of \(A\) there are numbers \(a\) and \(b\) such that \(a<x<b\) and the \emph{open interval} \(\set{y}[a<y<b]\) is a subset of \(A\). Of course, we must verify that this family of sets is indeed a topology, but this offers no difficulty. It is worth noticing that, conveniently, an open interval is an open set.
+
+A set \(U\) in a topological space \(\left(X,\symcal{T}\right)\) is a \emph{neighborhood} (\(\symcal{T}\)-neighborhood) of a point \(x\) iff \(U\) contains an open set to which \(x\) belongs. A neighborhood of a point need not be an open set, but every open set is a neighborhood of each of its points. Each neighborhood of a point contains an open neighborhood of the point. If \(\symcal{T}\) is the indiscrete topology the only neighborhood of a point \(x\) is the space \(X\) itself. If \(\symcal{T}\) is the discrete topology, then every set to which a point belongs is a neighborhood of it. If \(X\) is the set of real numbers and \(\symcal{T}\) is the usual topology, then a neighborhood of a point is a set containing an open interval to which the point belongs.
+
+\begin{theorem}
+    A set is open if and only if it contains a neighborhood of each of its points.
+    \begin{proof}
+        The union \(U\) of all open subsets of a set \(A\) is surely an open subset of \(A\). If \(A\) contains a neighborhood of each of its points, then each member \(x\) of \(A\) belongs to some open subset of \(A\) and hence \(x\in U\). In this case \(A=U\) and therefore \(A\) is open. On the other hand, if \(A\) is open it contains a neighborhood (namely, \(A\)) of each of its points.
+    \end{proof}
+\end{theorem}
+
+The foregoing theorem evidently implies that a set is open iff it is a neighborhood of each of its points.
+
+The \emph{neighborhood system} of a point is the family of all neighborhoods of the point.
+
+\begin{theorem}
+    If \(\symcal{U}\) is the neighborhood system of a point, then finite intersections of members of \(\symcal{U}\) belong to \(\symcal{U}\), and each set which contains a member of \(\symcal{U}\) belongs to \(\symcal{U}\).
+    \begin{proof}
+        If \(U\) and \(V\) are neighborhoods of a point \(x\), there are open neighborhoods \(U_0\) and \(V_0\) contained in \(U\) and \(V\) respectively. Then \(U\cap V\) contains the open neighborhood \(U_0\cap V_0\) and is hence a neighborhood of \(x\). Thus the intersection of two (and hence of any finite number of) members of \(\symcal{U}\) is a member. If a set \(U\) contains a neighborhood of a point \(x\) it contains an open neighborhood of \(x\) and is consequently itself a neighborhood.
+    \end{proof}
+\end{theorem}
+
+\begin{notes}
+    Fréchet [1] first considered abstract spaces. The concept of a topological space developed during the following years, accompanied by a good deal of experimentation with definitions and fundamental processes. Much of the development of the theory may be found in Hausdorff's classic work [1] and, a little later, in the early volumes of \emph{Fundamenta Mathematicae}. There are actually two fundamental concepts which have grown out of these researches: that of a topological space and that of a uniform space (chapter 7). The latter notion, which has been formalized relatively recently (A. Weil [1]), owes much to the study of topological groups.
+    
+    Standard references on general topology include:
+    \begin{quote}
+        Alexandroff and Hopf [1] (the first two chapters), Bourbaki [1], Fréchet [2], Kuratowski [1], Lefschetz [1] (the first chapter), R. L. Moore [1], Newman [1], Sierpinski [1], Tukey [1], Vaidyanathaswamy [1], and G. T. Whyburn [1].
+    \end{quote}
+\end{notes}
