@@ -35,17 +35,17 @@ is the total mass of the system times the velocity of the center of mass. Conseq
     If the total external force is zero, the total linear momentum is conserved.
 \end{theorem}
 
-We obtain the total angular momentum of the system by forming the cross product \(\symbf{r}_i\times\symbf{p}_i\) and summing over \(i\). If this operation is performed in Eq.~\eqref{eq:1.19}, there results, with the aid of the identity, Eq.~\eqref{eq:1.10},
+We obtain the total angular momentum of the system by forming the cross product \(\symbf{r}_i\vectimes\symbf{p}_i\) and summing over \(i\). If this operation is performed in Eq.~\eqref{eq:1.19}, there results, with the aid of the identity, Eq.~\eqref{eq:1.10},
 \begin{equation}
-    \sum_i\left(\symbf{r}_i\times\dot{\symbf{p}}_i\right)=\sum_i\odv*{\left(\symbf{r}_i\times\symbf{p}_i\right)}{t}=\dot{\symbf{L}}=\sum_i\symbf{r}_i\times\symbf{F}_i^{\left(e\right)}+\sum_{\substack{i,j\\i\ne j}}\symbf{r}_i\times\symbf{F}_{ji}.\label{eq:1.24}
+    \sum_i\left(\symbf{r}_i\vectimes\dot{\symbf{p}}_i\right)=\sum_i\odv*{\left(\symbf{r}_i\vectimes\symbf{p}_i\right)}{t}=\dot{\symbf{L}}=\sum_i\symbf{r}_i\vectimes\symbf{F}_i^{\left(e\right)}+\sum_{\substack{i,j\\i\ne j}}\symbf{r}_i\vectimes\symbf{F}_{ji}.\label{eq:1.24}
 \end{equation}
 The last term on the right in \eqref{eq:1.24} can be considered a sum of the pairs of the form
 \begin{equation}
-    \symbf{r}_i\times\symbf{F}_{ji}+\symbf{r}_j\times\symbf{F}_{ij}=\left(\symbf{r}_i-\symbf{r}_j\right)\times\symbf{F}_{ji},\label{eq:1.25}
+    \symbf{r}_i\vectimes\symbf{F}_{ji}+\symbf{r}_j\vectimes\symbf{F}_{ij}=\left(\symbf{r}_i-\symbf{r}_j\right)\vectimes\symbf{F}_{ji},\label{eq:1.25}
 \end{equation}
 using the equality of action and reaction. But \(\symbf{r}_i-\symbf{r}_j\) is identical with the vector \(\symbf{r}_{ij}\) from \(j\) to \(i\) (cf. Fig.~\ref{fig:1.2}), so that the right-hand side of Eq.~\eqref{eq:1.25} can be written as
 \begin{equation*}
-    \symbf{r}_{ij}\times\symbf{F}_{ji}.
+    \symbf{r}_{ij}\vectimes\symbf{F}_{ji}.
 \end{equation*}
 If the internal forces between two particles, in addition to being equal and opposite, also lie along the line joining the particles---a condition known as the \emph{strong law of action and reaction}---then all of these cross products vanish. The sum over pairs is zero under this assumption and Eq.~\eqref{eq:1.24} may be written in the form
 \begin{equation}
@@ -68,7 +68,7 @@ Note that the conservation of linear momentum in the absence of applied forces a
 
 Equation~\eqref{eq:1.23} states that the total linear momentum of the system 1s the same as if the entire mass were concentrated at the center of mass and moving with it. The analogous theorem for angular momentum is more complicated. With the origin \(O\) as reference point, the total angular momentum of the system is
 \begin{equation*}
-    \symbf{L}=\sum_i\symbf{r}_i\times\symbf{p}_i.
+    \symbf{L}=\sum_i\symbf{r}_i\vectimes\symbf{p}_i.
 \end{equation*}
 Let \(\symbf{R}\) be the radius vector from \(O\) to the center of mass, and let \(\symbf{r}_i'\) be the radius vector from the center of mass to the \(i\)th particle. Then we have (cf. Fig.~\ref{fig:1.3})
 \begin{equation}
@@ -88,11 +88,11 @@ is the velocity of the center of mass relative to \(O\), and
 \end{equation*}
 is the velocity of the \(i\)th particle relative to the center of mass of the system. Using Eq.~\eqref{eq:1.27}, the total angular momentum takes on the form
 \begin{equation*}
-    \symbf{L}=\sum_i\symbf{R}\times m_i\symbf{v}+\sum_i\symbf{r}_i'\times m_i\symbf{v}_i'+\left(\sum_im_i\symbf{r}_i'\right)\times\symbf{v}+\symbf{R}\times\odv*{\sum_im_i\symbf{r}_i'}{t}.
+    \symbf{L}=\sum_i\symbf{R}\vectimes m_i\symbf{v}+\sum_i\symbf{r}_i'\vectimes m_i\symbf{v}_i'+\left(\sum_im_i\symbf{r}_i'\right)\vectimes\symbf{v}+\symbf{R}\vectimes\odv*{\sum_im_i\symbf{r}_i'}{t}.
 \end{equation*}
 The last two terms in this expression vanish, for both contain the factor \(\sum m_i\symbf{r}_i'\), which, it will be recognized, defines the radius vector of the center of mass in the very coordinate system whose origin is the center of mass and is therefore a null vector. Rewriting the remaining terms, the total angular momentum about \(O\) is
 \begin{equation}
-    \symbf{L}=\symbf{R}\times M\symbf{v}+\sum_i\symbf{r}_i'\times\symbf{p}_i'.\label{eq:1.28}
+    \symbf{L}=\symbf{R}\vectimes M\symbf{v}+\sum_i\symbf{r}_i'\vectimes\symbf{p}_i'.\label{eq:1.28}
 \end{equation}
 In words, Eq.~\eqref{eq:1.28} says that the total angular momentum about a point \(O\) is the angular momentum of motion concentrated at the center of mass, plus the angular momentum of motion about the center of mass. The form of Eq.~\eqref{eq:1.28} emphasizes that in general \(\symbf{L}\) depends on the origin \(O\), through the vector \(\symbf{R}\). Only if the center of mass is at rest with respect to \(O\) will the angular momentum be independent of the point of reference. In this case, the first term in \eqref{eq:1.28} vanishes, and \(\symbf{L}\) always reduces to the angular momentum taken about the center of mass.
 
