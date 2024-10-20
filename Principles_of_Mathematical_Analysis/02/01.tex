@@ -41,10 +41,10 @@ For two finite sets \(A\) and \(B\), we evidently have \(A\sim B\) if and only i
 
 \begin{example}\label{example:2.1}
     Let \(A\) be the set of all integers. Then \(A\) is countable. For, consider the following arrangement of the sets \(A\) and \(J\):
-    \begin{align*}
-        &A\colon&&0,1,-1,2,-2,3,-3,\ldots\\
-        &J\colon&&1,2,3,4,5,6,7,\ldots
-    \end{align*}
+    \begin{alignat*}{2}
+        &A\colon\qquad&&0,1,-1,2,-2,3,-3,\ldots\\
+        &J\colon\qquad&&1,2,3,4,5,6,7,\ldots
+    \end{alignat*}
 \end{example}
 
 We can, in this example, even give an explicit formula for a function \(f\) from \(J\) to \(A\) which sets up a \(1\)-\(1\) correspondence:
@@ -59,7 +59,7 @@ We can, in this example, even give an explicit formula for a function \(f\) from
 \begin{remark}
     A finite set cannot be equivalent to one of its proper subsets. That this is, however, possible for infinite sets, is shown by Example~\ref{example:2.1}, in which \(J\) is a proper subset of \(A\).
     
-    In fact, we could replace Definition~\ref{definition:2.4}\ref{itm:2.2} by the statement: \(A\) is infinite if \(A\) is equivalent to one of its proper subsets.
+    In fact, we could replace Definition~\ref{definition:2.4}(\ref{itm:2.2}) by the statement: \(A\) is infinite if \(A\) is equivalent to one of its proper subsets.
 \end{remark}
 
 \begin{definition}
@@ -72,18 +72,19 @@ We can, in this example, even give an explicit formula for a function \(f\) from
     Sometimes it is convenient to replace \(J\) in this definition by the set of all nonnegative integers, i.e., to start with \(0\) rather than with \(1\).
 \end{definition}
 
-\begin{theorem}
+\begin{theorem}\label{theorem:2.1}
     Every infinite subset of a countable set \(A\) is countable.
-    \begin{proof}
-        Suppose \(E\subset A\), and \(E\) is infinite. Arrange the elements \(x\) of \(A\) in a sequence \(\set{x_n}\) of distinct elements. Construct a sequence \(\set{n_k}\) as follows:
-        
-        Let \(n_1\) be the smallest positive integer such that \(x_{n_1}\in E\). Having chosen \(n_1\), \ldots, \(n_{k-1}\) (\(k=2,3,4,\ldots\)), let \(n_k\) be the smallest integer greater than \(n_{k-1}\) such that \(x_{n_k}\in E\).
-        
-        Putting \(f\left(k\right)=x_{n_k}\) (\(k=1,2,3,\ldots\)), we obtain a \(1\)-\(1\) correspondence between \(E\) and \(J\).
-        
-        The theorem shows that, roughly speaking, countable sets represent the ``smallest" infinity: No uncountable set can be a subset of a countable set.
-    \end{proof}
 \end{theorem}
+
+\begin{proof}
+    Suppose \(E\subset A\), and \(E\) is infinite. Arrange the elements \(x\) of \(A\) in a sequence \(\set{x_n}\) of distinct elements. Construct a sequence \(\set{n_k}\) as follows:
+    
+    Let \(n_1\) be the smallest positive integer such that \(x_{n_1}\in E\). Having chosen \(n_1\), \ldots, \(n_{k-1}\) (\(k=2,3,4,\ldots\)), let \(n_k\) be the smallest integer greater than \(n_{k-1}\) such that \(x_{n_k}\in E\).
+    
+    Putting \(f\left(k\right)=x_{n_k}\) (\(k=1,2,3,\ldots\)), we obtain a \(1\)-\(1\) correspondence between \(E\) and \(J\).
+    
+    The theorem shows that, roughly speaking, countable sets represent the ``smallest" infinity: No uncountable set can be a subset of a countable set.
+\end{proof}
 
 \begin{definition}
     Let \(A\) and \(\Omega\) be sets, and suppose that with each element \(\alpha\) of \(A\) there is associated a subset of \(\Omega\) which we denote by \(E_\alpha\).
@@ -100,7 +101,7 @@ We can, in this example, even give an explicit formula for a function \(f\) from
     \end{equation}
     or
     \begin{equation}
-        S=E_1\cup E_2\cup\cdots\cup E_n.
+        S=E_1\cup E_2\cup\cdots\cup E_n.\label{eq:2.3}
     \end{equation}
     If \(A\) is the set of all positive integers, the usual notation is
     \begin{equation}
@@ -115,7 +116,7 @@ We can, in this example, even give an explicit formula for a function \(f\) from
     \end{equation}
     or
     \begin{equation}
-        P=\bigcap_{m=1}^nE_m=E_1\cap E_2\cap\cdots\cap E_n,
+        P=\bigcap_{m=1}^nE_m=E_1\cap E_2\cap\cdots\cap E_n,\label{eq:2.6}
     \end{equation}
     or
     \begin{equation}
@@ -124,12 +125,125 @@ We can, in this example, even give an explicit formula for a function \(f\) from
     as for unions. If \(A\cap B\) is not empty, we say that \(A\) and \(B\) \emph{intersect}; otherwise they are \emph{disjoint}.
 \end{definition}
 
-% Examples (a) Suppose E consists of 1, 2, 3 and E2  consists of 2, 3, 4. Then E, uE2  consists of 1, 2, 3, 4, whereas E t n E2  consists o\ 2, 3. ; 28 PRINCIPLES OF MATHEMATICAL ANALYSIS (b) Let A be the set of real numbers x such that < x < 1 .  For every x e A, let  Ex be the set of real numbers y such that < y < x. Then (i) (ii) (iii) Ex  c Ez if and only if < * < z < 1 U*»-*i5 x e A f|  Ex is empty; xeA (i) and (ii) are clear. To prove (iii), we note that for every y > 0, y $ Ex \tx<y. Hence ytC\xmA Ex . 2.11 Remarks Many properties of unions and intersections are quite similar to those of sums and products, in fact, the words sum and product were some times used in this connection, and the symbols I and n were written in place of (J and p| The commutative and associative laws are trivial: (8) Au B =Bv A; A n B- Bn A. (9) (Au B)u C = A u(BuC)', (A n B) n C =A n (B n C). Thus the omission of parentheses in (3) and (6) is justified. The distributive law also holds: (10) An(BuC) = (AnB)u(An C). To prove this, let the left and right members of (10) be denoted by E and 7\ respectively. Suppose x g E. Then x e A and x e B kj C, that is, x e B or x e C (pos sibly both). Hence xe A n B or x e A n C, so that x e F. Thus E <= F. Next, suppose x e F. Then xeAnB or xeAnC. That is, x e A, and xeB\j C. Hence x e A n {B v C), so that Fc E. It follows that E = F. We list a few more relations which are easily verified: (11) (12) If denotes the empty set, then (13) IfAcB, then AcAvB, An Bcz A. AvO=A, An0=0. AuB =B, AnB=A. (14) , . BASIC TOPOLOGY 29 2.12 Theorem Let {E„}, n = 1,}> 3, . . . ,  be a sequence ofcountablesets, andput (15) Then S is countable. S=\jEm . n=l Proof Let every set En be arranged in a sequence {xnk},  k = 1, 2, 3, ... and consider the infinite array *rT (16)-*3i ^xfs ^*T* •*2lT ^ii ^#21 ^x^i *33 «*4i XA2 *43 X24. x34 , *44 in which the elements of En  form the nth row. The array contains all elements of S. As indicated by the arrows, these elements can be arranged in a sequence (1 i) *11»*21» *12» *31>*22» *13> *41 J  XZ2 *-^23 »  ^14J • • If any two of the sets E„ have elements in common, these will appear more than once in (17). Hence there is a subset T of the set of all positive integers such that 5 ~ 7\ which shows that S is at most countable (Theorem 2.8). Since Ex  a S, and E, is infinite, S is infinite, and thus countable. Corollary Suppose A is at most countable, and, for every a e A, Ba is at most countable. Put T={JB.. aeA Then Tis at most countable. For T is equivalent to a subset of (15). 2.13 Theorem Let A be a countable set, and let B„ be the set of all n-tuples (at ,  ... ,  an),  where ak  e A (k = 1, . . . ,  n), and the elements ax , . . , a„ need not be distinct. Then Bn is countable. Proof That Bx  is countable is evident, since Bx  = A. Suppose E„_, is countable (n = 2, 3, 4, . . .).  The elements of Bn are of the form (18) (b,a) (beBn_x ,aeA). For every fixed b, the set of pairs (b, a) is equivalent to A, and hence countable. Thus Bn is the union of a countable set of countable sets. By Theorem 2.12, Bn is countable. The theorem follows by induction. 30 PRINCIPLES OF MATHEMATICAL ANALYSIS Corollary The set ofall rational numbers is countable. Proof We apply Theorem 2.13, with n = 2, noting that every rational r is of the form bja, where a and b are integers. The set of pairs (a, b), and therefore the set of fractions b/a, is countable. In fact, even the set of all algebraic numbers is countable (see Exer cise 2). That not all infinite sets are, however, countable, is shown by the next theorem. and 1 . 2.14 Theorem Let A be the set ofall sequences whose elements are the digits This set A is uncountable. The elements of A are sequences like 1, 0, 0, 1, 0, 1, 1, 1, Proof Let E be a countable subset of A, and let  E consist of the se quences s{ ,  s2 . y3 , We construct a sequence s as follows. If the nth digit in sn is 1, we let the nth digit of s be 0, and vice versa. Then the sequence s differs from every member of E in at least one place; hence si E. But clearly se A, so that E is a proper subset of A. We have shown that every countable subset of A is a proper subset of A. It follows that A is uncountable (for otherwise A would be a proper subset of A, which is absurd). The idea ofthe above proofwas first used by Cantor, and is called Cantor's diagonal process; for, if the sequences st,  s2 ,  s3t . . .  are placed in an array like (16), it is the elements on the diagonal which are involved in the construction of the new sequence. Readers who are familiar with the binary representation of the real numbers (base 2 instead of 10) will notice that Theorem 2.14 implies that the set of all real numbers is uncountable. We shall give a second proof of this fact in Theorem 2.43
+\begin{example}
+    \leavevmode
+    \begin{enumerate}
+        \item Suppose \(E\) consists of \(1\), \(2\), \(3\) and \(E_2\) consists of \(2\), \(3\), \(4\). Then \(E_1\cup E_2\) consists of \(1\), \(2\), \(3\), \(4\), whereas \(E_1\cap E_2\) consists of \(2\), \(3\).
+        \item Let \(A\) be the set of real numbers \(x\) such that \(0<x\leqslant1\). For every \(x\in A\), let \(E_x\) be the set of real numbers \(y\) such that \(0<y<x\). Then
+        \begin{enumerate}
+            \item\label{itm:8} \(E_x\subset E_z\) if and only if \(0<x\leqslant z\leqslant1\);
+            \item\label{itm:9} \(\bigcup_{x\in A}E_x=E_1\);
+            \item\label{itm:10} \(\bigcap_{x\in A}E_x\) is empty;
+        \end{enumerate}
+        (\ref{itm:8}) and (\ref{itm:9}) are clear. To prove (\ref{itm:10}), we note that for every \(y>0\), \(y\notin E_x\) if \(x<y\). Hence \(y\notin\bigcap_{x\in A}E_x\).
+    \end{enumerate}
+\end{example}
 
+\begin{remarks}
+    Many properties of unions and intersections are quite similar to those of sums and products, in fact, the words sum and product were sometimes used in this connection, and the symbols \(\sum\) and \(\prod\) were written in place of \(\bigcup\) and \(\bigcap\).
+
+    The commutative and associative laws are trivial:
+    \begin{alignat}{2}
+        A\cup B&=B\cup A;\qquad&A\cap B&=B\cap A.\\
+        \left(A\cup B\right)\cup C&=A\cup\left(B\cup C\right);\qquad&\left(A\cap B\right)\cap C&=A\cap\left(B\cap C\right).
+    \end{alignat}
+    Thus the omission of parentheses in \eqref{eq:2.3} and \eqref{eq:2.6} is justified.
+
+    The distributive law also holds:
+    \begin{equation}
+        A\cap\left(B\cup C\right)=\left(A\cap B\right)\cup\left(A\cap C\right).\label{eq:2.10}
+    \end{equation}
+    To prove this, let the left and right members of \eqref{eq:2.10} be denoted by \(E\) and \(F\), respectively.
+
+    Suppose \(x\in E\). Then \(x\in A\) and \(x\in B\cup C\), that is, \(x\in B\) or \(x\in C\) (possibly both). Hence \(x\in A\cap B\) or \(x\in A\cap C\), so that \(x\in F\). Thus \(E\subset F\).
+
+    Next, suppose \(x\in F\). Then \(x\in A\cap B\) or \(x\in A\cap C\). That is, \(x\in A\), and \(x\in B\cup C\). Hence \(x\in A\cap\left(B\cup C\right)\), so that \(F\subset E\).
+
+    It follows that \(E=F\).
+\end{remarks}
+
+We list a few more relations which are easily verified:
+\begin{gather}
+    A\subset A\cup B,\\
+    A\cap B\subset A.
+\end{gather}
+If \(0\) denotes the empty set, then
 \begin{equation}
-    \begin{matrix}
-        \mathmakebox[0pt][l]{\cancelto{}{\phantom{\begin{matrix}x_{11}&x_{12}\\x_{21}&x_{22}\end{matrix}}}}\cancelto{}{x_{11}} & x_{12} & x_{13} & x_{14} & \cdots \\
-        x_{21} & x_{22} & x_{23} & x_{24} & \cdots \\
-        \multicolumn{5}{c}{\cdots}
-    \end{matrix}
+    A\cup0=A,\qquad A\cap0=0.
 \end{equation}
+If \(A\subset B\), then
+\begin{equation}
+    A\cup B=B,\qquad A\cap B=A.
+\end{equation}
+
+\begin{theorem}\label{theorem:2.2}
+    Let \(\set{E_n}\), \(n=1,2,3,\ldots\), be a sequence of countable sets, and put
+    \begin{equation}
+        S=\bigcup_{n=1}^\infty E_n.\label{eq:2.15}
+    \end{equation}
+    Then \(S\) is countable.
+\end{theorem}
+
+\begin{proof}
+    Let every set \(E_n\) be arranged in a sequence \(\set{x_{nk}}\), \(k=1,2,3,\ldots\), and consider the infinite array
+    \begin{equation}
+        \raisebox{-0.5\height}{\includegraphics[scale = 0.15]{02/figures/1}}\label{eq:2.16}
+    \end{equation}
+    in which the elements of \(E_n\) form the \(n\)th row. The array contains all elements of \(S\). As indicated by the arrows, these elements can be arranged in a sequence
+    \begin{equation}
+        x_{11};x_{21},x_{12};x_{31},x_{22},x_{13};x_{41},x_{32},x_{23},x_{14};\ldots\label{eq:2.17}
+    \end{equation}
+    If any two of the sets \(E_n\) have elements in common, these will appear more than once in \eqref{eq:2.17}. Hence there is a subset \(T\) of the set of all positive integers such that \(S\sim T\), which shows that \(S\) is at most countable (Theorem~\ref{theorem:2.1}). Since \(E_1\subset S\), and \(E_1\) is infinite, \(S\) is infinite, and thus countable.
+\end{proof}
+
+\begin{corollary}
+    Suppose \(A\) is at most countable, and, for every \(\alpha\in A\), \(B_\alpha\) is at most countable. Put
+    \begin{equation*}
+        T=\bigcup_{\alpha\in A}B_\alpha.
+    \end{equation*}
+    Then \(T\) is at most countable.
+\end{corollary}
+
+For \(T\) is equivalent to a subset of \eqref{eq:2.15}.
+
+\begin{theorem}\label{theorem:2.3}
+    Let \(A\) be a countable set, and let \(B_n\) be the set of all \(n\)-tuples \(\left(a_1,\ldots,a_n\right)\), where \(a_k\in A\) (\(k=1,\ldots,n\)), and the elements \(a_1\), \ldots, \(a_n\) need not be distinct. Then \(B_n\) is countable.
+\end{theorem}
+
+\begin{proof}
+    That \(B_1\) is countable is evident, since \(B_1=A\). Suppose \(B_{n-1}\), is countable (\(n=2,3,4,\ldots\)). The elements of \(B_n\) are of the form
+    \begin{equation}
+        \left(b,a\right)\qquad\text{(\(b\in B_{n-1}\), \(a\in A\))}.
+    \end{equation}
+    For every fixed \(b\), the set of pairs \(\left(b,a\right)\) is equivalent to \(A\), and hence countable. Thus \(B_n\) is the union of a countable set of countable sets. By Theorem~\ref{theorem:2.2}, \(B_n\) is countable.
+
+    The theorem follows by induction.
+\end{proof}
+
+\begin{corollary}
+    The set of all rational numbers is countable.
+\end{corollary}
+
+\begin{proof}
+    We apply Theorem~\ref{theorem:2.3}, with \(n=2\), noting that every rational \(r\) is of the form \(\rfrac{b}{a}\), where \(a\) and \(b\) are integers. The set of pairs \(\left(a,b\right)\), and therefore the set of fractions \(\rfrac{b}{a}\), is countable.
+\end{proof}
+
+In fact, even the set of all algebraic numbers is countable (see Exercise~\ref{exercise:2.2}).
+
+That not all infinite sets are, however, countable, is shown by the next theorem.
+
+\begin{theorem}\label{theorem:2.4}
+    Let \(A\) be the set of all sequences whose elements are the digits \(0\) and \(1\). This set \(A\) is uncountable.
+\end{theorem}
+
+The elements of \(A\) are sequences like \(1\), \(0\), \(0\), \(1\), \(0\), \(1\), \(1\), \(1\), \ldots.
+
+\begin{proof}
+    Let \(E\) be a countable subset of \(A\), and let \(E\) consist of the sequences \(s_1\), \(s_2\), \(s_3\), \ldots. We construct a sequence \(s\) as follows. If the \(n\)th digit in \(s_n\) is \(1\), we let the \(n\)th digit of \(s\) be \(0\), and vice versa. Then the sequence \(s\) differs from every member of \(E\) in at least one place; hence \(s\notin E\). But clearly \(s\in A\), so that \(E\) is a proper subset of \(A\).
+
+    We have shown that every countable subset of \(A\) is a proper subset of \(A\). It follows that \(A\) is uncountable (for otherwise \(A\) would be a proper subset of \(A\), which is absurd).
+\end{proof}
+
+The idea of the above proof was first used by Cantor, and is called Cantor's diagonal process; for, if the sequences \(s_1\), \(s_2\), \(s_3\), \ldots\ are placed in an array like \eqref{eq:2.16}, it is the elements on the diagonal which are involved in the construction of the new sequence.
+
+Readers who are familiar with the binary representation of the real numbers (base \(2\) instead of \(10\)) will notice that Theorem~\ref{theorem:2.4} implies that the set of all real numbers is uncountable. We shall give a second proof of this fact in Theorem~\ref{theorem:2.?}.

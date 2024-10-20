@@ -16,12 +16,13 @@ The first sum on the right is simply the total external force \(\symbf{F}^{\left
 \end{equation}
 The vector \(\symbf{R}\) defines a point known as the \emph{center of mass}, or more loosely as the center of gravity, of the system (cf. Fig.~\ref{fig:1.1}). With this definition, \eqref{eq:1.20} reduces to
 \begin{equation}
-    M\odv[2]{\symbf{R}}{t}=\sum_i\symbf{F}_i^{\left(e\right)}\equiv\symbf{F}^{\left(e\right)},
+    M\odv[2]{\symbf{R}}{t}=\sum_i\symbf{F}_i^{\left(e\right)}\equiv\symbf{F}^{\left(e\right)},\label{eq:1.22}
 \end{equation}
 which states that the center of mass moves as if the total external force were acting on the entire mass of the system concentrated at the center of mass. Purely internal forces, if they obey Newton's third law, therefore have no effect on the motion of the center of mass. An oft-quoted example is the motion of an exploding shell---the center of mass of the fragments traveling as if the shell were still in a single piece (neglecting air resistance). The same principle is involved in jet and rocket propulsion. In order that the motion of the center of mass be unaffected, the ejection of the exhaust gases at high velocity must be counterbalanced by the forward motion of the vehicle at a slower velocity.
 
 \begin{figure}[htbp]
     \centering
+    \includegraphics[scale = 0.225]{01/figures/1.1}
     \caption{The center of mass of a system of particles.}
     \label{fig:1.1}
 \end{figure}
@@ -58,6 +59,7 @@ The time derivative of the total angular momentum is thus equal to the moment of
 
 \begin{figure}[htbp]
     \centering
+    \includegraphics[scale = 0.225]{01/figures/1.2}
     \caption{The vector \(\symbf{r}_{ij}\) between the \(i\)th and \(j\)th particles.}
     \label{fig:1.2}
 \end{figure}
@@ -98,6 +100,7 @@ In words, Eq.~\eqref{eq:1.28} says that the total angular momentum about a point
 
 \begin{figure}[htbp]
     \centering
+    \includegraphics[scale = 0.225]{01/figures/1.3}
     \caption{The vectors involved in the shift of reference point for the angular momentum.}
     \label{fig:1.3}
 \end{figure}
@@ -119,10 +122,12 @@ where \(T\), the total kinetic energy of the system, is
     T=\frac{1}{2}\sum_im_iv_i^2.
 \end{equation}
 Making use of the transformations to center-of-mass coordinates, given in Eq.~\eqref{eq:1.27}, we may also write \(T\) as
-\begin{align*}
-    T&=\frac{1}{2}\sum_im_i\left(\symbf{v}+\symbf{v}_i'\right)\cdot\left(\symbf{v}+\symbf{v}_i'\right)\\
-    &=\frac{1}{2}\sum_im_iv^2+\frac{1}{2}\sum_im_iv_i'^2+\symbf{v}\cdot\odv*{\left(\sum_im_i\symbf{r}_i'\right)}{t},
-\end{align*}
+\begin{equation*}
+    \begin{aligned}
+        T&=\frac{1}{2}\sum_im_i\left(\symbf{v}+\symbf{v}_i'\right)\cdot\left(\symbf{v}+\symbf{v}_i'\right)\\
+        &=\frac{1}{2}\sum_im_iv^2+\frac{1}{2}\sum_im_iv_i'^2+\symbf{v}\cdot\odv*{\left(\sum_im_i\symbf{r}_i'\right)}{t},
+    \end{aligned}
+\end{equation*}
 and by the reasoning already employed in calculating the angular momentum, the last term vanishes, leaving 
 \begin{equation}
     T=\frac{1}{2}Mv^2+\frac{1}{2}\sum_im_iv_i'^2.
@@ -131,7 +136,7 @@ The kinetic energy, like the angular momentum, thus also consists of two parts: 
 
 Consider now the right-hand side of Eq.~\eqref{eq:1.29}. In the special case that the external forces are derivable in terms of the gradient of a potential, the first term can be written as
 \begin{equation*}
-    \sum_i\int_1^2\symbf{F}_i^{\left(e\right)}\cdot\odif{\symbf{s}_i}=-\sum_i\int_1^2\nabla_iV_i\cdot\odif{\symbf{s}_i}=-\eval[\bigg]{\sum_iV_i}[1][2],
+    \sum_i\int_1^2\symbf{F}_i^{\left(e\right)}\cdot\odif{\symbf{s}_i}=-\sum_i\int_1^2\symbf{\nabla}_iV_i\cdot\odif{\symbf{s}_i}=-\eval[\bigg]{\sum_iV_i}[1][2],
 \end{equation*}
 where the subscript \(i\) on the del operator indicates that the derivatives are with respect to the components of \(\symbf{r}_i\). If the internal forces are also conservative, then the mutual forces between the \(i\)th and \(j\)th particles, \(\symbf{F}_{ij}\) and \(\symbf{F}_{ji}\), can be obtained from a potential function \(V_{ij}\). To satisfy the strong law of action and reaction, \(V_{ij}\) can be a function only of the distance between the particles:
 \begin{equation}
@@ -139,21 +144,21 @@ where the subscript \(i\) on the del operator indicates that the derivatives are
 \end{equation}
 The two forces are then automatically equal and opposite,
 \begin{equation}
-    \symbf{F}_{ji}=-\nabla_iV_{ij}=+\nabla_jV_{ij}=-\symbf{F}_{ij},
+    \symbf{F}_{ji}=-\symbf{\nabla}_iV_{ij}=+\symbf{\nabla}_jV_{ij}=-\symbf{F}_{ij},
 \end{equation}
 and lie along the line joining the two particles,
 \begin{equation}
-    \nabla V_{ij}\left(\abs[\symbf{r}_i-\symbf{r}_j]\right)=\left(\symbf{r}_i-\symbf{r}_j\right)f,
+    \symbf{\nabla} V_{ij}\left(\abs[\symbf{r}_i-\symbf{r}_j]\right)=\left(\symbf{r}_i-\symbf{r}_j\right)f,
 \end{equation}
 where \(f\) is some scalar function. If \(V_{ij}\) were also a function of the difference of some other pair of vectors associated with the particles, such as their velocities or (to step into the domain of modern physics) their intrinsic ``spin" angular momentum, then the forces would still be equal and opposite, but would not necessarily lie along the direction between the particles.
 
 When the forces are all conservative, the second term in Eq.~\eqref{eq:1.29} can be rewritten as a sum over \emph{pairs} of particles, the terms for each pair being of the form
 \begin{equation*}
-    -\int_1^2\left(\nabla_iV_{ij}\cdot\odif{\symbf{s}_{i}}+\nabla_jV_{ij}\cdot\odif{\symbf{s}_j}\right).
+    -\int_1^2\left(\symbf{\nabla}_iV_{ij}\cdot\odif{\symbf{s}_{i}}+\symbf{\nabla}_jV_{ij}\cdot\odif{\symbf{s}_j}\right).
 \end{equation*}
-If the difference vector \(\symbf{r}_i-\symbf{r}_j\) is denoted by \(\symbf{r}_{ij}\), and if \(\nabla_{ij}\) stands for the gradient with respect to \(\symbf{r}_{ij}\), then
+If the difference vector \(\symbf{r}_i-\symbf{r}_j\) is denoted by \(\symbf{r}_{ij}\), and if \(\symbf{\nabla}_{ij}\) stands for the gradient with respect to \(\symbf{r}_{ij}\), then
 \begin{equation*}
-    \nabla_iV_{ij}=\nabla_{ij}V_{ij}=-\nabla_jV_{ij},
+    \symbf{\nabla}_iV_{ij}=\symbf{\nabla}_{ij}V_{ij}=-\symbf{\nabla}_jV_{ij},
 \end{equation*}
 and
 \begin{equation*}
@@ -161,11 +166,11 @@ and
 \end{equation*}
 so that the term for the \(ij\) pair has the form
 \begin{equation*}
-    -\int\nabla_{ij}V_{ij}\cdot\odif{\symbf{r}_{ij}}.
+    -\int\symbf{\nabla}_{ij}V_{ij}\cdot\odif{\symbf{r}_{ij}}.
 \end{equation*}
 The total work arising from internal forces then reduces to
 \begin{equation}
-    -\frac{1}{2}\sum_{\substack{i,j\\i\ne j}}\int_1^2\nabla_{ij}V_{ij}\cdot\odif{\symbf{r}_{ij}}=-\frac{1}{2}\eval[\bigg]{\sum_{\substack{i,j\\i\ne j}}V_{ij}}[1][2].\label{eq:1.35}
+    -\frac{1}{2}\sum_{\substack{i,j\\i\ne j}}\int_1^2\symbf{\nabla}_{ij}V_{ij}\cdot\odif{\symbf{r}_{ij}}=-\frac{1}{2}\eval[\bigg]{\sum_{\substack{i,j\\i\ne j}}V_{ij}}[1][2].\label{eq:1.35}
 \end{equation}
 The factor \(\frac{1}{2}\) appears in Eq.~\eqref{eq:1.35} because in summing over \emph{both} \(i\) and \(j\) each member of a given pair is included twice, first in the \(i\) summation and then in the \(j\) summation.
 

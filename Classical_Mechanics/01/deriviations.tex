@@ -1,0 +1,66 @@
+\section*{Derivations}
+
+\begin{enumerate}
+    \item Show that for a single particle with constant mass the equation of motion implies the following differential equation for the kinetic energy:
+    \begin{equation*}
+        \odv{T}{t}=\symbf{F}\cdot\symbf{v},
+    \end{equation*}
+    while if the mass varies with time the corresponding equation is
+    \begin{equation*}
+        \odv{\left(mT\right)}{t}=\symbf{F}\cdot\symbf{p}.
+    \end{equation*}
+    \item Prove that the magnitude \(R\) of the position vector for the center of mass from an arbitrary origin is given by the equation
+    \begin{equation*}
+        M^2R^2=M\sum_im_ir_i^2-\frac{1}{2}\sum_{i,j}m_im_jr_{ij}^2.
+    \end{equation*}
+    \item Suppose a system of two particles is known to obey the equations of motion, Eqs.~\eqref{eq:1.22} and \eqref{eq:1.26}. From the equations of the motion of the individual particles show that the internal forces between particles satisfy both the weak and the strong laws of action and reaction. The argument may be generalized to a system with arbitrary number of particles, thus proving the converse of the arguments leading to Eqs.~\eqref{eq:1.22} and \eqref{eq:1.26}.
+    \item\label{derivation:1.4} The equations of constraint for the rolling disk, Eqs.~\eqref{eq:1.39}, are special cases of gen- eral linear differential equations of constraint of the form
+    \begin{equation*}
+        \sum_{i=1}^ng_i\left(x_1,\ldots,x_n\right)\odif{x_i}=0.
+    \end{equation*}
+    A constraint condition of this type is holonomic only if an integrating function \(f\left(x_1,\ldots,x_n\right)\) can be found that turns it into an exact differential. Clearly the function must be such that
+    \begin{equation*}
+        \pdv{\left(fg_i\right)}{x_j}=\pdv{\left(fg_j\right)}{x_i}
+    \end{equation*}
+    for all \(i\ne j\). Show that no such integrating factor can be found for either of Eqs.~\eqref{eq:1.39}.
+    \item Two wheels of radius \(a\) are mounted on the ends of a common axle of length \(b\) such that the wheels rotate independently. The whole combination rolls without slipping on a plane. Show that there are two nonholonomic equations of constraint,
+    \begin{equation*}
+        \begin{aligned}
+            \cos\theta\odif{x}+\sin\theta\odif{y}&=0,\\
+            \sin\theta\odif{x}-\cos\theta\odif{y}&=\frac{1}{2}a\left(\odif{\phi}+\odif{\phi'}\right),
+        \end{aligned}
+    \end{equation*}
+    (where \(\theta\), \(\phi\), and \(\phi'\) have meanings similar to those in the problem of a single vertical disk, and \(\left(x,y\right)\) are the coordinates of a point on the axle midway between the two wheels) and one holonomic equation of constraint,
+    \begin{equation*}
+        \theta=C-\frac{a}{b}\left(\phi-\phi'\right).
+    \end{equation*}
+    where \(C\) is a constant.
+    \item A particle moves in the \(xy\) plane under the constraint that its velocity vector is always directed towards a point on the \(x\) axis whose abscissa is some given function of time \(f\left(t\right)\). Show that for \(f\left(t\right)\) differentiable, but otherwise arbitrary, the constraint is nonholonomic.
+    \item Show that Lagrange's equations in the form of Eqs.~\eqref{eq:1.53} can also be written as
+    \begin{equation*}
+        \pdv{\dot{T}}{\dot{q}_j}-2\pdv{T}{q_j}=Q_j.
+    \end{equation*}
+    These are sometimes known as the \emph{Nielsen} form of the Lagrange equations.
+    \item If \(L\) is a Lagrangian for a system of \(n\) degrees of freedom satisfying Lagrange's equations, show by direct substitution that
+    \begin{equation*}
+        L'=L+\odv{F\left(q_1,\ldots,q_n,t\right)}{t}
+    \end{equation*}
+    also satisfies Lagrange's equations where \(F\) is any arbitrary, but differentiable, function of its arguments.
+    \item The electromagnetic field is invariant under a gauge transformation of the scalar and vector potential given by
+    \begin{equation*}
+        \begin{aligned}
+            \symbf{A}&\to\symbf{A}+\symbf{\nabla}\psi\left(\symbf{r},\symbf{t}\right),\\
+            \phi&\to\phi-\frac{1}{c}\pdv{\psi}{t},
+        \end{aligned}
+    \end{equation*}
+    where \(\psi\) is arbitrary (but differentiable). What effect does this gauge transformation have on the Lagrangian of a particle moving in the electromagnetic field? Is the motion affected?
+    \item Let \(q_1\), \ldots, \(q_n\) be a set of independent generalized coordinates for a system of \(n\) degrees of freedom, with a Lagrangian \(L\left(q,\dot{q},t\right)\). Suppose we transform to another set of independent coordinates \(s_1\), \ldots, \(s_n\) by means of transformation equations
+    \begin{equation*}
+        q_i=q_i\left(s_1,\ldots,s_n,t\right),\qquad i=1,\ldots,n.
+    \end{equation*}
+    (Such a transformation is called a \emph{point transformation}.) Show that if the Lagrangian function is expressed as a function of \(s_j\), \(\dot{s}_j\), and \(t\) through the equations of transformation, then \(L\) satisfies Lagrange's equations with respect to the \(s\) coordinates:
+    \begin{equation*}
+        \odv*{\left(\pdv{L}{\dot{s}_j}\right)}{t}-\pdv{L}{s_j}=0.
+    \end{equation*}
+    In other words, the form of Lagrange's equations is invariant under a point transformation. 
+\end{enumerate}
