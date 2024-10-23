@@ -1,0 +1,185 @@
+\section{Definition and Existence of the Integral}
+
+\begin{definition}\label{definition:6.1}
+    Let \(\left[a,b\right]\) be a given interval. By a \emph{partition} \(P\) of \(\left[a,b\right]\) we mean a finite set of points \(x_0\), \(x_1\), \ldots, \(x_n\), where
+    \begin{equation*}
+        a=x_0\leqslant x_1\leqslant\cdots\leqslant x_{n-1}\leqslant x_n=b.
+    \end{equation*}
+    We write
+    \begin{equation*}
+        \increment x_i=x_i-x_{i-1}\qquad\text{(\(i=1,\ldots,n\))}.
+    \end{equation*}
+    Now suppose \(f\) is a bounded real function defined on \(\left[a,b\right]\). Corresponding to each partition \(P\) of \(\left[a,b\right]\) we put
+    \begin{align*}
+        M_i&=\sup f\left(x\right)\qquad\text{(\(x_{i-1}\leqslant x\leqslant x_i\))},\\
+        m_i&=\inf f\left(x\right)\qquad\text{(\(x_{i-1}\leqslant x\leqslant x_i\))},\\
+        U\left(P,f\right)&=\sum_{i=1}^nM_i\increment x_i,\\
+        L\left(P,f\right)&=\sum_{i=1}^nm_i\increment x_i,
+    \end{align*}
+    and finally
+    \begin{align}
+        \upint_a^bf\odif{x}=\inf U\left(P,f\right),\label{eq:6.1}\\
+        \lowint_a^bf\odif{x}=\sup L\left(P,f\right),\label{eq:6.2}
+    \end{align}
+    where the \(\inf\) and the \(\sup\) are taken over all partitions \(P\) of \(\left[a,b\right]\). The left members of \eqref{eq:6.1} and \eqref{eq:6.2} are called the \emph{upper} and \emph{lower Riemann integrals} of \(f\) over \(\left[a,b\right]\), respectively.
+
+    If the upper and lower integrals are equal, we say that \(f\) is \emph{Riemann-integrable} on \(\left[a,b\right]\), we write \(f\in\symscr{R}\) (that is, \(\symscr{R}\) denotes the set of Riemann-integrable functions), and we denote the common value of \eqref{eq:6.1} and \eqref{eq:6.2} by
+    \begin{equation}
+        \int_a^bf\odif{x}
+    \end{equation}
+    or by
+    \begin{equation}
+        \int_a^bf\left(x\right)\odif{x}.
+    \end{equation}
+
+    This is the \emph{Riemann integral} of \(f\) over \(\left[a,b\right]\). Since \(f\) is bounded, there exist two numbers, \(m\) and \(M\), such that
+    \begin{equation*}
+        m\leqslant f\left(x\right)\leqslant M\qquad\text{(\(a\leqslant x\leqslant b\))}.
+    \end{equation*}
+    Hence, for every \(P\)
+    \begin{equation*}
+        m\left(b-a\right)\leqslant L\left(P,f\right)\leqslant U\left(P,f\right)\leqslant M\left(b-a\right),
+    \end{equation*}
+    so that the numbers \(L\left(P,f\right)\) and \(U\left(P,f\right)\) form a bounded set. This shows that \emph{the upper and lower integrals are defined for every} bounded function \(f\). The question of their equality, and hence the question of the integrability of \(f\), is a more delicate one. Instead ofinvestigating it separately for the Riemann integral, we shall immediately consider a more general situation.
+\end{definition}
+
+\begin{definition}
+    Let \(\alpha\) be a monotonically increasing function on \(\left[a,b\right]\) (since \(\alpha\left(a\right)\) and \(\alpha\left(b\right)\) are finite, it follows that \(\alpha\) is bounded on \(\left[a,b\right]\)). Corresponding to each partition \(P\) of \(\left[a,b\right]\), we write
+    \begin{equation*}
+        \increment\alpha_i=\alpha\left(x_i\right)-\alpha\left(x_{i-1}\right).
+    \end{equation*}
+    It is clear that \(\increment\alpha_i\geqslant0\). For any real function \(f\) which is bounded on \(\left[a,b\right]\) we put
+    \begin{align*}
+        U\left(P,f,\alpha\right)=\sum_{i=1}^nM_i\increment\alpha_i,\\
+        L\left(P,f,\alpha\right)=\sum_{i=1}^nm_i\increment\alpha_i,
+    \end{align*}
+    where \(M_i\), \(m_i\) have the same meaning as in Definition~\ref{definition:6.1}, and we define
+    \begin{align}
+        \upint_a^bf\odif{\alpha}=\inf U\left(P,f,\alpha\right),\label{eq:6.5}\\
+        \lowint_a^bf\odif{\alpha}=\sup L\left(P,f,\alpha\right),\label{eq:6.6}
+    \end{align}
+    the \(\inf\) and \(\sup\) again being taken over all partitions.
+
+    If the left members of \eqref{eq:6.5} and \eqref{eq:6.6} are equal, we denote their common value by
+    \begin{equation}
+        \int_a^bf\odif{\alpha}\label{eq:6.7}
+    \end{equation}
+    or sometimes by
+    \begin{equation}
+        \int_a^bf\left(x\right)\odif{\alpha\left(x\right)}.\label{eq:6.8}
+    \end{equation}
+
+    This is the \emph{Riemann--Stieltjes integral} (or simply the \emph{Stieltjes integral}) of \(f\) with respect to \(\alpha\), over \(\left[a,b\right]\).
+
+    If \eqref{eq:6.7} exists, i.e., if \eqref{eq:6.5} and \eqref{eq:6.6} are equal, we say that \(f\) is integrable with respect to \(\alpha\), in the Riemann sense, and write \(f\in\symscr{R}\left(\alpha\right)\).
+\end{definition}
+
+By taking \(\alpha\left(x\right)=x\), the Riemann integral is seen to be a special case of the Riemann--Stieltjes integral. Let us mention explicitly, however, that in the general case \(\alpha\) need not even be continuous.
+
+A few words should be said about the notation. We prefer \eqref{eq:6.7} to \eqref{eq:6.8}, since the letter \(x\) which appears in \eqref{eq:6.8} adds nothing to the content of \eqref{eq:6.7}. It is immaterial which letter we use to represent the so-called ``variable of integration." For instance, \eqref{eq:6.8} is the same as
+\begin{equation*}
+    \int_a^bf\left(y\right)\odif{\alpha\left(y\right)}.
+\end{equation*}
+The integral depends on \(f\), \(\alpha\), \(a\) and \(b\), but not on the variable of integration, which may as well be omitted.
+
+The role played by the variable of integration is quite analogous to that of the index of summation: The two symbols
+\begin{equation*}
+    \sum_{i=1}^nc_i,\qquad\sum_{k=1}^nc_k
+\end{equation*}
+are the same, since each means \(c_1+c_2+\cdots+c_n\).
+
+Of course, no harm is done by inserting the variable of integration, and in many cases it is actually convenient to do so.
+
+We shall now investigate the existence of the integral \eqref{eq:6.7}. Without saying so every time, \(f\) will be assumed real and bounded, and \(\alpha\) monotonically increasing on \(\left[a,b\right]\); and, when there can be no misunderstanding, we shall write \(\int\) in place of \(\int_a^b\).
+
+\begin{definition}
+    We say that the partition \(P^*\) is a \emph{refinement} of \(P\) if \(P^*\supset P\) (that is, if every point of \(P\) is a point of \(P^*\)). Given two partitions, \(P_1\) and \(P_2\), we say that \(P^*\) is their \emph{common refinement} if \(P^*=P_1\cup P_2\).
+\end{definition}
+
+\begin{theorem}\label{theorem:6.1}
+    If \(P^*\) is a refinement of \(P\), then
+    \begin{equation}
+        L\left(P,f,\alpha\right)\leqslant L\left(P^*,f,\alpha\right)\label{eq:6.9}
+    \end{equation}
+    and
+    \begin{equation}
+        U\left(P^*,f,\alpha\right)\leqslant U\left(P,f,\alpha\right).\label{eq:6.10}
+    \end{equation}
+\end{theorem}
+
+\begin{proof}
+    To prove \eqref{eq:6.9}, suppose first that \(P^*\) contains just one point more than \(P\). Let this extra point be \(x^*\), and suppose \(x_{i-1}<x^*<x_i\), where \(x_{i-1}\) and \(x_i\) are two consecutive points of \(P\). Put
+    \begin{align*}
+        w_1&=\inf f\left(x\right)\qquad\text{(\(x_{i-1}\leqslant x\leqslant x^*\))},\\
+        w_2&=\inf f\left(x\right)\qquad\text{(\(x^*\leqslant x\leqslant x_i\))}.
+    \end{align*}
+    Clearly \(w_1>m_i\) and \(w_2>m_i\), where, as before,
+    \begin{equation*}
+        m_i=\inf f\left(x\right)\qquad\text{(\(x_{i-1}\leqslant x\leqslant x_i\))}.
+    \end{equation*}
+    Hence
+    \begin{align*}
+        &\phantom{{}={}}L\left(P^*,f,\alpha\right)-L\left(P,f,\alpha\right)\\
+        &=w_1\left[\alpha\left(x^*\right)-\alpha\left(x_{i-1}\right)\right]+w_2\left[\alpha\left(x_i\right)-\alpha\left(x^*\right)\right]-m_i\left[\alpha\left(x_i\right)-\alpha\left(x_{i-1}\right)\right]\\
+        &=\left(w_1-m_i\right)\left[\alpha\left(x^*\right)-\alpha\left(x_{i-1}\right)\right]+\left(w_2-m_i\right)\left[\alpha\left(x_i\right)-\alpha\left(x^*\right)\right]\geqslant0.
+    \end{align*}
+    If \(P^*\) contains \(k\) points more than \(P\), we repeat this reasoning \(k\) times, and arrive at \eqref{eq:6.9}. The proof of \eqref{eq:6.10} is analogous.
+\end{proof}
+
+\begin{theorem}
+    \(\lowint_a^bf\odif{\alpha}\leqslant\upint_a^bf\odif{\alpha}\).
+\end{theorem}
+
+\begin{proof}
+    Let \(P^*\) be the common refinement of two partitions \(P_1\), and \(P_2\). By Theorem~\ref{theorem:6.1},
+    \begin{equation*}
+        L\left(P_1,f,\alpha\right)\leqslant L\left(P^*,f,\alpha\right)\leqslant U\left(P^*,f,\alpha\right)\leqslant U\left(P_2,f,\alpha\right)
+    \end{equation*}
+    Hence
+    \begin{equation}
+        L\left(P_1,f,\alpha\right)\leqslant U\left(P_2,f,\alpha\right).\label{eq:6.11}
+    \end{equation}
+    If \(P_2\) is fixed and the \(\sup\) is taken over all \(P_1\), \eqref{eq:6.11} gives
+    \begin{equation}
+        \lowint f\odif{\alpha}\leqslant U\left(P_2,f,\alpha\right).\label{eq:6.12}
+    \end{equation}
+    The theorem follows by taking the \(\inf\) over all \(P_2\) in \eqref{eq:6.12}.
+\end{proof}
+
+\begin{theorem}\label{theorem:6.3}
+    \(f\in\symscr{R}\left(a\right)\) on \(\left[a,b\right]\) if and only if for every \(\varepsilon>0\) there exists a partition \(P\) such that
+    \begin{equation}
+        U\left(P,f,\alpha\right)-L\left(P,f,\alpha\right)<\varepsilon.\label{eq:6.13}
+    \end{equation}
+\end{theorem}
+
+\begin{proof}
+    For every \(P\) we have
+    \begin{equation*}
+        L\left(P,f,\alpha\right)\leqslant\lowint f\odif{\alpha}\leqslant\upint f\odif{\alpha}\leqslant U\left(P,f,\alpha\right).
+    \end{equation*}
+    Thus \eqref{eq:6.13} implies
+    \begin{equation*}
+        0\leqslant\upint f\odif{\alpha}-\lowint f\odif{\alpha}<\varepsilon.
+    \end{equation*}
+    Hence, if \eqref{eq:6.13} can be satisfied for every \(\varepsilon>0\), we have
+    \begin{equation*}
+        \upint f\odif{\alpha}=\lowint f\odif{\alpha},
+    \end{equation*}
+    that is, \(f\in\symscr{R}\left(\alpha\right)\).
+
+    Conversely, suppose \(f\in\symscr{R}\left(\alpha\right)\), and let \(\varepsilon>0\) be given. Then there exist partitions \(P_1\) and \(P_2\) such that
+    \begin{align}
+        U\left(P_2,f,\alpha\right)-\int f\odif{\alpha}&<\frac{\varepsilon}{2},\label{eq:6.14}\\
+        \int f\odif{\alpha}-L\left(P_1,f,\alpha\right)&<\frac{\varepsilon}{2}.\label{eq:6.15}
+    \end{align}
+    We choose \(P\) to be the common refinement of \(P_1\) and \(P_2\). Then Theorem~\ref{theorem:6.1}, together with \eqref{eq:6.14} and \eqref{eq:6.15}, shows that
+    \begin{equation*}
+        U\left(P,f,\alpha\right)\leqslant U\left(P_2,f,\alpha\right)<\int f\odif{\alpha}+\frac{\varepsilon}{2}<L\left(P_1,f,\alpha\right)+\varepsilon\leqslant L\left(P,f,\alpha\right)+\varepsilon,
+    \end{equation*}
+    so that \eqref{eq:6.13} holds for this partition \(P\).
+\end{proof}
+
+Theorem~\ref{theorem:6.3} furnishes a convenient criterion for integrability. Before we apply it, we state some closely related facts.
+
+% 6.7 Theorem (a) IfXI3) holdsfor some P and some e, then (13) holds (with the same e) for every refinement ofP. (b) If (13) holds for P = {x , . . . ,  xn}  and if st , /, are arbitrary points in il/W-/(',)|Aa,<e. 1=1 (c) //ye £?(a) and the hypotheses of(b) hold, then < I J=l JA Proof Theorem 6.4 implies (a). Under the assumptions made in (b), bothf(Si) andf(t{ ) lie in [w, ,  A/,], so that \f(s{)-/(/,) |  < vV/,- w, .  Thus I l/(*i)-/Ml Aa, * W/> «) ~ W>/> «), i=l which proves (b). The obvious inequalities £*/>,/, a) < Zfttd Aa, < U(P,fx) and prove (c). L(P,/, a) < Ifda < U(P,f a) 6.8 Theorem 7/"/w continuous on [a, b] thenfe £?(a) on [a, b]. (16) Proof Let e > be given. Choose n > so that [«(&)- <x(a)]n < e. Since /is uniformly continuous on [a, b] (Theorem 4.19), there exists a 6 > such that \f(x)-f(t)\ <rj = 126 PRINCIPLES OF MATHEMATICAL ANALYSIS (17) if x e [a, b), t 6 [a, b], and  |  x- t \  < S. If jP is any partition of [a, b] such that A.v, < 6 for all /,  then (16) implies that Mi-m^t] (f-1, ...,#») and therefore {/(/>,/, a)- L(P,/ a) = Y (Mi- mj Aa, n < >7 = i » £ Aa,- = //[a(&)- a(a)] < e. By Theorem 6.6, /e #(a). 6.9 Theorem Iff is monotonic on [a, b], and if a is continuous on [a, b], then fe ^2(a). (We still assume, ofcourse, that a is monotonic.) Proof Let e > be given. For any positive integer n, choose a partition such that Aa, (i n = \, ...,n). This is possible since a is continuous (Theorem 4.23). We suppose that/is monotonically increasing (the proof is analogous in the other case). Then M^Ax,), so that /»,=/(*,_,) (i = 1,...,/i), U(P,f, a)- UPJ, «) = g(6) ~ M(a) f [/(*,)-/(or,.,)] n if a? is taken large enough. By Theorem 6.6, fe 3?(ct). 6.10 Theorem Suppose f is bounded on [a, b], f has only finitely many points of discontinuity on [a, b], and a is continuous at every point at which f is discon tinuous. Thenfe@(cc). Proof Let e > be given. Put M = sup \f(x)\ ,  let  E be the set of points at which /is discontinuous. Since E is finite and a is continuous at every point of E, we can cover E by finitely many disjoint intervals [uj, Vj]  c [a, b] such that the sum of the corresponding differences a(Vj) — ol(Uj) is less than e. Furthermore, we can place these intervals in such a way that every point of E n (a, b) lies in the interior of some [uj ,  pj. THE RIEMANN-STIELTJES INTEGRAL 127 Remove the segments (w, ,  Vj) from [a, b). The remaining set K is compact. Hence /is uniformly continuous on K, and there exists 5 > such that |/(j)-/(/)| <£ \tseK, t e K, \s- t\  < S. Now form a partition P = {x ,  xlt . .  ., xn}  of [a, b], as follows: Each Uj occurs in P. Each Vj occurs in P. No point ofany segment (ujy vj) occurs in P. If a / _ 1  is not one of the Uj ,  then Ax, < 6. Note that A/,- m, < 2A/ for every /,  and that /V/ f  — m %  < e unless *,_! is one of the w,-. Hence, as in the proof of Theorem 6.8, U(P,f a)- L(?,/, a) < [a(Z>)- x(a)]e + 2Me. Since e is arbitrary, Theorem 6.6 shows that/e M{v). Note: Iffand a have a common point of discontinuity, then /need not be in &(y). Exercise 3 shows this. 6.11 Theorem Suppose fe Mix) on [a, b],  m <f< M, (j> is continuous on [m, M), and h(x) = (f>(f(x)) on [a, b]. Then h e #{?) on [a, b]. Proof Choose e > 0. Since $ is uniformly continuous on [m, A/], there exists (5>0 such that 6 < c and \<l>(s)- </>(t)\  <e if \s- t\  <5 and s, t e [w, M]. Sincefe %{?), there is a partition P = {x ,  x^, that (18) U(P,f, a)- L(P,f a) < S2 . xn}  of [a, b] such Let A/,-, nij have the same meaning as in Definition 6.1, and let A/,*, m* be the analogous numbers for h. Divide the numbers 1, .  .., n into two classes: / e A if A/,  — w, < S, i e B if  Mt  — m{  > 3. For ie'A, our choice of S shows that M* — mf < e. For i e 5, Mf- w* < 2K, where A"= sup| <£(0| ,  /" < f  < A/. By (18), we have (19) S X A«i < X (Af|- >»«) Aa,- < <5 2 <eB icfl so that Y,ieB Act-i  < £• It follows that U(P, h, a)- L(/>, /;, a) = X (M*- '«*) Aa,- + X M* ~ w?) Aa . i'e/4 / e B < e[a(6)- «(<?)] + 2Ac5 < e[a(ft)- a(fl) + 2A]. Since e was arbitrary, Theorem 6.6 implies that //  e @(cc). Remark: This theorem suggests the question: Just what functions are Riemann-integrable? The answer is given by Theorem 1  1.33(6).
