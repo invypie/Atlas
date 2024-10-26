@@ -1,0 +1,42 @@
+\section{Properties of the Integral}
+
+\begin{theorem}
+    \leavevmode
+    \begin{enumerate}
+        \item If \(f_1\in\symscr{R}\left(\alpha\right)\) and \(f_2\in\symscr{R}\left(\alpha\right)\) on \(\left[a,b\right]\), then
+        \begin{equation*}
+            f_1+f_2\in\symscr{R}\left(\alpha\right),
+        \end{equation*}
+        \(cf\in\symscr{R}\left(\alpha\right)\) for every constant \(c\), and
+        \begin{align*}
+            \int_a^b\left(f_1+f_2\right)\odif{\alpha}&=\int_a^bf_1\odif{\alpha}+\int_a^bf_2\odif{\alpha},\\
+            \int_a^bcf\odif{\alpha}&=c\int_a^bf\odif{\alpha}.
+        \end{align*}
+        \item If \(f_1\left(x\right)\leqslant f_2\left(x\right)\) on \(\left[a,b\right]\) then
+        \begin{equation*}
+            \int_a^bf_1\odif{\alpha}\leqslant\int_a^bf_2\odif{\alpha}.
+        \end{equation*}
+        \item If \(f\in\symscr{R}\left(\alpha\right)\) on \(\left[a,b\right]\) and if \(a<c<b\), then \(f\in\symscr{R}\left(\alpha\right)\) on \(\left[a,c\right]\) and on \(\left[c,b\right]\), and
+        \begin{equation*}
+            \int_a^cf\odif{\alpha}+\int_c^bf\odif{\alpha}=\int_a^bf\odif{\alpha}.
+        \end{equation*}
+        \item If \(f\in\symscr{R}\left(\alpha\right)\) on \(\left[a,b\right]\) and if \(\abs[f\left(x\right)]\leqslant M\) on \(\left[a,b\right]\), then
+        \begin{equation*}
+            \abs[\int_a^bf\odif{\alpha}]\leqslant M\left[\alpha\left(b\right)-\alpha\left(a\right)\right].
+        \end{equation*}
+        \item If \(f\in\symscr{R}\left(\alpha_1\right)\) and \(f\in\symscr{R}\left(\alpha_2\right)\), then \(f\in\symscr{R}\left(\alpha_1+\alpha_2\right)\) and
+        \begin{equation*}
+            \int_a^bf\odif{\left(\alpha_1+\alpha_2\right)}=\int_a^bf\odif{\alpha_1}+\int_a^bf\odif{\alpha_2};
+        \end{equation*}
+        if \(f\in\symscr{R}\left(\alpha\right)\) and \(c\) is a positive constant, then \(f\in\symscr{R}\left(c\alpha\right)\) and
+        \begin{equation*}
+            \int_a^bf\odif{\left(c\alpha\right)}=c\int_a^bf\odif{\alpha}.
+        \end{equation*}
+    \end{enumerate}
+\end{theorem}
+
+\begin{proof}
+    % f/=/i +/2 and P is any partition of [a, b], we have ITX/i, «) + L(P,f2 , a) < L(P,f a) < U(P,f a) < U(P,f, a) + U(PJ2 , a). If f e (a) and f2 e t(a), let e > be given. There are partitions Pj 0=1, 2) such that U(Pj ,fJ ,a)-L(PJ ,fj,a)<e. / THE RIEMANN-STIELTJES INTEGRAL 129 These inequalities persist if P and P2 are replaced by their common refinement P. Then (20) implies U(P,f, (x)-L(P,f, a)<2a, which proves that/e £(<x). With this same P we have U(PJJt *)<!fjd* + B hence (20) implies (21) 0=1,2); fd < U(P,f, a) < J/i doc + j/2 </a + 2e. Since e was arbitrary, we conclude that fd* < J/, da + J/2 d*. If we replace /i and 2 in (21) by —fx and-f2, the inequality is reversed, and the equality is proved. The proofs of the other assertions of Theorem 6.12 are so similar that we omit the details. In part (c) the point is that (by passing to refine ments) we may restrict ourselves to partitions which contain the point c, in approximating fd<x.
+\end{proof}
+
+% 6.13 Theorem Iffe My) andg e (a) on [a, b], then (a) fg e(aj; |/| e (a) am/ fd*< l/l da. Proof Ifwe take <j>t) = t 2 , Theorem 6.1 1 shows that/2 e *) if/e (*). The identity Vg = (f+g)2-(f-g)2 completes the proof of (a). Ifwe take 0(0 = M, Theorem 6.11 shows similarly that |/|.€(a). Choose c = + 1, so that Then c Ifda > 0. ffd* = cfd*=cfdoL<fdoi, since cf< f. 6.14 Definition The unit stepfunction I is defined by (0 (x < 0), **-i OO). . 130 PRINCIPLES OF MATHEMATICAL ANALYSIS 6.15 Theorem If a < s < b, f is bounded on [a, b]y f is continuous at s, and ol(x) = I(x — s), then x ffdx =f(s). Proof Consider partitions P = x , .x, x2 , x3), where x = a, and = s < x2 < x3 = b. Then U(P,f, a) = M2 , /.(/»,/, a) = m2 . Since / is continuous at s, we see that M2 and m2 converge to f(s) as x->-*s. 6.16 Theorem Suppose cn > for 1,2, 3, . . . , Lcn converges, s„ is a sequence ofdistinct points in (a> b), and (22) «(x)=fj cn I(x-sn). n= 1 Let fbe continuous on [a, b]. Then (23) Ja Pfd* = t cjsn). n =l Proof The comparison test shows that the series (22) converges for every x. Its sum a(x) is evidently monotonic, and a(tf) = 0, x(b) = Ic„ (This is the type of function that occurred in Remark 4.31.) Let £ > be given, and choose N so that T, cn< i Put «l(*) = Z Cn J( X ~ Sn)> n=l By Theorems 6.12 and 6.15, (24) J a «2W = £ C„I(x- Sn). N+l fV«fai = I cnf(sn). i=i Since cc2(b) — a2(a) < e, (25)  fd*i <Me, THE RIEMANN-STIELTJES INTEGRAL 131 where M = supf(x): Since a = a! + a2 , it follows from (24) and (25) that ,b N (26) I J a fdoi-Y.cnf(sn) ,= i If we let N-* oo, we obtain (23). < Me. 6.17 Theorem Assume a increases monotonieally and a' e0t on [a, b]. Let f be a bounded realfunction on [a, b]. Then fe @a) ifand only iffa' e M. In that case b (27) (fdOL=  J a J a f(x)<xx)dx. Proof Let e > be given and apply Theorem 6.6 to a': There is a par tition P = jc , . . . , x,, of [a, b] such that (28) (29) (30) (31) U(P, a')- L(P, a') < e. The mean value theorem furnishes points f,e [*,i, xt] such that Aa, = a'(f,-) Axf for / = 1, . . . , n. If st e [jtj-i, x, then t |«'(*i)-«'WI Ajc,<e, »=i by (28) and Theorem 6.7(6). Put M = sup|/(x)| . Since ,t/(5,)Aai =i/()aU)Ax,. i=l it follows from (29) that i=l £ /(*,) Aaf- £ /X*iK(*.) A*, i=l In particular, i=l < Me. RsdKUiPJ + Me, for all choices of st e [x,i, *,], so that U(P,f a) < U(P,fa') + Me. The same argument leads from (30) to U(P,fx') < U(P,f, a) + Me. Thus U(P,f,a)-U(P,fa') <Me. 132 PRINCIPLES OF MATHEMATICAL ANALYSIS Now note that (28) remains true ifP is replaced by any refinement. Hence (31) also remains true. We conclude that Vfda- Yf(x)<x'(x) dx < Me. J a But e is arbitrary. Hence (32) J a Yfda = Yf(xMx)dxt J a J a for any bounded /. The equality of the lower integrals follows from (30) in exactly the same way. The theorem follows. 6.18 Remark The two preceding theorems illustrate the generality and flexibility which are inherent in the Stieltjes process of integration. If a is a pure step function [this is the name often given to functions of the form (22)], the integral reduces to a finite or infinite series. If a has an integrable derivative, the integral reduces to an ordinary Riemann integral. This makes it possible in manycases to study series and integrals simultaneously, rather than separately. To illustrate this point, consider a physical example. The moment of inertia of a straight wire of unit length, about an axis through an endpoint, at right angles to the wire, is (33) fx* Jo dm where m(x) is the mass contained in the interval [0, jc]. If the wire is regarded as having a continuous density p, that is, if m'(x) = p(x), then (33) turns into (34) points jc,- , (33) becomes (35) Cx2 p(x) dx. Jo On the other hand, if the wire is composed of masses m, concentrated at I*?«,. i Thus (33) contains (34) and (35) as special cases, but it contains much more; for instance, the case in which m is continuous but not everywhere differentiable. 6.19 Theorem (change ofvariable) Suppose (p is a strictly increasing continuous function that maps an interval [A, B] onto [ay b. Suppose a is monotonically increasing on [a, b] andfe (<x) on [a, b]. Define /? and g on [A, B] by p(y) = oc(</>(>0), g(y) =X<p(y)). (36) THE RIEMANN-STIELTJES INTEGRAL 133 Then g e (fi) and (37) fA gdp = fg fda. Proof To each partition P = x , . . . , xn) of [a, b] corresponds a partition Q = >>o . • • • . y„ of [A, B], so that x, = (f>(yt ). All partitions of [A, B] (38) (39) are obtained in this way. Since the values taken by /on [Jf|i,xj are exactly the same as those taken by  on [,>i, yj, we see that U(Q, * » = £/(/>,/, a), Kg, * »-HM«)• Since /e (a), /> can be chosen so that both U(P,f a) and L(P,f a) are close to fd<x. Hence (38), combined with Theorem 6.6, shows that g e ) and that (37) holds. This completes the proof. Let us note the following special case: Take <x(x) = x. Then /? = (p. Assume q>' e @ on [A, B]. If Theorem 6.17 is applied to the left side of (37), we obtain JyWdx = fjicpiyWiy) dy.

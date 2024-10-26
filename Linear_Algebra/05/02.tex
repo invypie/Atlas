@@ -1,0 +1,206 @@
+\section{Determinant Functions}
+
+Let \(K\) be a commutative ring with identity. We wish to assign to each \(n\times n\) (square) matrix over \(K\) a scalar (element of \(K\)) to be known as the determinant of the matrix. It is possible to define the determinant of a square matrix \(A\) by simply writing down a formula for this determinant in terms of the entries of \(A\). One can then deduce the various properties of determinants from this formula. However, such a formula is rather complicated, and to gain some technical advantage we shall proceed as follows. We shall define a `determinant function' on \(K^{n\times n}\) as a function which assigns to each \(n\times n\) matrix over \(K\) a scalar, the function having these special properties. It is linear as a function of each of the rows of the matrix; its value is \(0\) on any matrix having two equal rows; and its value on the \(n\times n\) identity matrix is \(1\). We shall prove that such a function exists, and then that it is unique, i.e., that there is precisely one such function. As we prove the uniqueness, an explicit formula for the determinant will be obtained, along with many of its useful properties.
+
+This section will be devoted to the definition of `determinant function' and to the proof that at least one such function exists.
+
+\begin{definition}
+    Let \(K\) be a commutative ring with identity, \(n\) a positive integer, and let \(D\) be a function which assigns to each \(n\times n\) matrix \(A\) over \(K\) a scalar \(D\left(A\right)\) in \(K\). We say that \(D\) is \emph{\(n\)-linear} if for each \(i\), \(1\leqslant i\leqslant n\), \(D\) is a linear function of the \(i\)th row when the other \(\left(n-1\right)\) rows are held fixed.
+\end{definition}
+
+This definition requires some clarification. If \(D\) is a function from \(K^{n\times n}\) into \(K\), and if \(\alpha_1\), \(\ldots\), \(\alpha_n\) are the rows of the matrix \(A\), let us also write
+\begin{equation*}
+    D\left(A\right)=D\left(\alpha_1,\ldots,\alpha_n\right)
+\end{equation*}
+that is, let us also think of \(D\) as the function of the rows of \(A\). The statement that \(D\) is \(n\)-linear then means
+\begin{multline}
+    D\left(\alpha_1,\ldots,c\alpha_i+\alpha_i',\ldots,\alpha_n\right)=cD\left(\alpha_1,\ldots,\alpha_i,\ldots,\alpha_n\right)\\
+    +D\left(\alpha_1,\ldots,\alpha_i',\ldots,\alpha_n\right).\label{eq:5.1}
+\end{multline}
+If we fix all rows except row \(i\) and regard \(D\) as a function of the \(i\)th row, it is often convenient to write \(D\left(\alpha_i\right)\) for \(D\left(A\right)\). Thus, we may abbreviate \eqref{eq:5.1} to
+\begin{equation*}
+    D\left(c\alpha_i+\alpha_i'\right)=cD\left(\alpha_i\right)+D\left(\alpha_i'\right)
+\end{equation*}
+so long as it is clear what the meaning is.
+
+\begin{example}\label{example:5.1}
+    Let \(k_1\), \(\ldots\), \(k_n\) be positive integers, \(1\leqslant k_i\leqslant n\), and let \(a\) be an element of \(K\). For each \(n\times n\) matrix \(A\) over \(K\), define
+    \begin{equation}
+        D\left(A\right)=aA\left(1,k_1\right)\cdots A\left(n,k_n\right).\label{eq:5.2}
+    \end{equation}
+    Then the function \(D\) defined by \eqref{eq:5.2} is \(n\)-linear. For, if we regard \(D\) as a function of the \(i\)th row of \(A\), the others being fixed, we may write
+    \begin{equation*}
+        D\left(\alpha_i\right)=A\left(i,k_i\right)b
+    \end{equation*}
+    where \(b\) is some fixed element of \(K\). Let \(\alpha_i'=\left(A_{i1}',\ldots,A_{in}'\right)\). Then we have
+    \begin{align*}
+        D\left(c\alpha_i+\alpha_{i}'\right)=\left[cA\left(i,k_i\right)+A'\left(i,k_i\right)\right]b=cD\left(\alpha_i\right)+D\left(\alpha_i'\right).
+    \end{align*}
+    Thus \(D\) is a linear function of each of the rows of \(A\).
+
+    A particular \(n\)-linear function of this type is
+    \begin{equation*}
+        D\left(A\right)=A_{11}A_{22}\cdots A_{nn}.
+    \end{equation*}
+    In other words, the `product of the diagonal entries' is an \(n\)-linear function on \(K^{n\times n}\).
+\end{example}
+
+\begin{example}\label{example:5.2}
+    Let us find all \(2\)-linear functions on \(2\times2\) matrices over \(K\). Let \(D\) be such a function. If we denote the rows of the \(2\times2\) identity matrix by \(\epsilon_1\), \(\epsilon_2\), we have
+    \begin{equation*}
+        D\left(A\right)=D\left(A_{11}\epsilon_1+A_{12}\epsilon_2,A_{21}\epsilon_1+A_{22}\epsilon_2\right).
+    \end{equation*}
+    Using the fact that \(D\) is \(2\)-linear, \eqref{eq:5.1}, we have
+    \begin{align*}
+        D\left(A\right)&=A_{11}D\left(\epsilon_1,A_{21}\epsilon_1+A_{22}\epsilon_2\right)+A_{12}D\left(\epsilon_2,A_{21}\epsilon_1+A_{22}\epsilon_2\right)\\
+        &=
+        \begin{multlined}[t]
+            A_{11}A_{21}D\left(\epsilon_1,\epsilon_1\right)+A_{11}A_{22}D\left(\epsilon_1,\epsilon_2\right)\\
+            +A_{12}A_{21}D\left(\epsilon_2,\epsilon_1\right)+A_{12}A_{22}D\left(\epsilon_2,\epsilon_2\right).
+        \end{multlined}
+    \end{align*}
+    Thus \(D\) is completely determined by the four scalars
+    \begin{equation*}
+        D\left(\epsilon_1,\epsilon_1\right),\qquad D\left(\epsilon_1,\epsilon_2\right),\qquad D\left(\epsilon_2,\epsilon_1\right),\qquad\text{and}\qquad D\left(\epsilon_2,\epsilon_2\right).
+    \end{equation*}
+    The reader should find it easy to verify the following. If \(a\), \(b\), \(c\), \(d\) are any four scalars in \(K\) and if we define
+    \begin{equation*}
+        D\left(A\right)=A_{11}A_{21}a+A_{11}A_{22}b+A_{12}A_{21}c+A_{12}A_{22}d
+    \end{equation*}
+    then \(D\) is a \(2\)-linear function on \(2\times2\) matrices over \(K\) and
+    \begin{alignat*}{2}
+        D\left(\epsilon_1,\epsilon_1\right)&=a,\qquad&D\left(\epsilon_1,\epsilon_2\right)&=b,\\
+        D\left(\epsilon_2,\epsilon_1\right)&=c,\qquad&D\left(\epsilon_2,\epsilon_2\right)&=d.
+    \end{alignat*}
+\end{example}
+
+\begin{lemma}
+    A linear combination of \(n\)-linear functions is \(n\)-linear.
+\end{lemma}
+
+\begin{proof}
+    It suffices to prove that a linear combination of two \(n\)-linear functions is \(n\)-linear. Let \(D\) and \(E\) be \(n\)-linear functions. If \(a\) and \(b\) belong to \(K\), the linear combination \(aD+bE\) is of course defined by
+    \begin{equation*}
+        \left(aD+bE\right)\left(A\right)=aD\left(A\right)+bE\left(A\right).
+    \end{equation*}
+    Hence, if we fix all rows except row \(i\)
+    \begin{align*}
+        \left(aD+bE\right)\left(c\alpha_i+\alpha_i'\right)&=aD\left(c\alpha_i+\alpha_i'\right)+bE\left(c\alpha_i+\alpha_i'\right)\\
+        &=acD\left(\alpha_i\right)+aD\left(\alpha_i'\right)+bcE\left(\alpha_i\right)+bE\left(\alpha_i'\right)\\
+        &=c\left(aD+bE\right)\left(\alpha_i\right)+\left(aD+bE\right)\left(\alpha_i'\right).\qedhere
+    \end{align*}
+\end{proof}
+
+If \(K\) is a field and \(V\) is the set of \(n\times n\) matrices over \(K\), the above lemma says the following. The set of \(n\)-linear functions on \(V\) is a subspace of the space of all functions from \(V\) into \(K\).
+
+\begin{example}\label{example:5.3}
+    Let \(D\) be the function defined on \(2\times 2\) matrices over \(K\) by
+    \begin{equation}
+        D\left(A\right)=A_{11}A_{22}-A_{12}A_{21}.\label{eq:5.3}
+    \end{equation}
+    Now \(D\) is the sum of two functions of the type described in Example~\ref{example:5.1}:
+    \begin{align*}
+        D&=D_1+D_2,\\
+        D_1\left(A\right)&=A_{11}A_{22},\\
+        D_2\left(A\right)&=-A_{12}A_{21}.
+    \end{align*}
+    By the above lemma, \(D\) is a \(2\)-linear function. The reader who has had any experience with determinants will not find this surprising, since he will recognize \eqref{eq:5.3} as the usual definition of the determinant of a \(2\times2\) matrix. Of course the function \(D\) we have just defined is not a typical \(2\)-linear function. It has many special properties. Let us note some of these properties. First, if \(I\) is the \(2\times2\) identity matrix, then \(D\left(I\right)=1\), i.e., \(D\left(\epsilon_1,\epsilon_2\right)=1\). Second, if the two rows of \(A\) are equal, then
+    \begin{equation*}
+        D\left(A\right)=A_{11}A_{12}-A_{12}A_{11}=0.
+    \end{equation*}
+    Third, if \(A'\) is the matrix obtained from a \(2\times2\) matrix \(A\) by interchanging its rows, then \(D\left(A'\right)=-D\left(A\right)\); for
+    \begin{align*}
+        D\left(A'\right)&=A_{11}'A_{22}'-A_{12}'A_{21}'\\
+        &=A_{21}A_{12}-A_{22}A_{11}\\
+        &=-D\left(A\right).
+    \end{align*}
+\end{example}
+
+\begin{definition}
+    Let \(D\) be an \(n\)-linear function. We say \(D\) is \emph{alternating} (or \emph{alternate}) if the following two conditions are satisfied:
+    \begin{enumerate}
+        \item\label{itm:5.2.1} \(D\left(A\right)=0\) whenever two rows of \(A\) are equal.
+        \item\label{itm:5.2.2} If \(A'\) is a matrix obtained from \(A\) by interchanging two rows of \(A\), then \(D\left(A'\right)=-D\left(A\right)\).
+    \end{enumerate}
+\end{definition}
+
+We shall prove below that any \(n\)-linear function \(D\) which satisfies \ref{itm:5.2.1} automatically satisfies \ref{itm:5.2.2}. We have put both properties in the definition of alternating \(n\)-linear function as a matter of convenience. The reader will probably also note that if \(D\) satisfies \ref{itm:5.2.2} and \(A\) is a matrix with two equal rows, then \(D\left(A\right)=-D\left(A\right)\). It is tempting to conclude that \(D\) satisfies condition~\ref{itm:5.2.1} as well. This is true, for example, if \(K\) is a field in which \(1+1\ne0\), but in general \ref{itm:5.2.1} is not a consequence of \ref{itm:5.2.1}.
+
+\begin{definition}
+    Let \(K\) be a commutative ring with identity, and let \(n\) be a: positive integer. Suppose \(D\) is a function from \(n\times n\) matrices over \(K\) into \(K\). We say that \(D\) is a \emph{determinant function} if \(D\) is \(n\)-linear, alternating, and \(D\left(I\right)=1\).
+\end{definition}
+
+As we stated earlier, we shall ultimately show that there is exactly one determinant function on \(n\times n\) matrices over \(K\). This is easily seen for \(1\times1\) matrices \(A=\left[a\right]\) over \(K\). The function \(D\) given by \(D\left(A\right)=a\) is a determinant function, and clearly this is the only determinant function on \(1\times 1\) matrices. We are also in a position to dispose of the case \(n=2\). The function
+\begin{equation}
+    D\left(A\right)=A_{11}A_{22}-A_{12}A_{21}
+\end{equation}
+was shown in Example~\ref{example:5.3} to be a determinant function. Furthermore, the formula exhibited in Example~\ref{example:5.2} shows that \(D\) is the only determinant function on \(2\times2\) matrices. For we showed that for any \(2\)-linear function \(D\)
+\begin{multline*}
+    D\left(A\right)=A_{11}A_{21}D\left(\epsilon_1,\epsilon_1\right)+A_{11}A_{22}D\left(\epsilon_1,\epsilon_2\right)\\
+    +A_{12}A_{21}D\left(\epsilon_2,\epsilon_1\right)+A_{12}A_{22}D\left(\epsilon_2,\epsilon_2\right).
+\end{multline*}
+If \(D\) is alternating, then
+\begin{equation*}
+    D\left(\epsilon_1,\epsilon_1\right)=D\left(\epsilon_2,\epsilon_2\right)=0
+\end{equation*}
+and
+\begin{equation*}
+    D\left(\epsilon_2,\epsilon_1\right)=-D\left(\epsilon_1,\epsilon_2\right)=-D\left(I\right).
+\end{equation*}
+If \(D\) also satisfies \(D\left(I\right)=1\), then
+\begin{equation*}
+    D\left(A\right)=A_{11}A_{22}-A_{12}A_{21}.
+\end{equation*}
+
+\begin{example}
+    Let \(F\) be a field and let \(D\) be any alternating \(3\)-linear function on \(3\times3\) matrices over the polynomial ring \(F\left[x\right]\).
+
+    Let
+    \begin{equation*}
+        A=
+        \begin{bmatrix}
+            x & 0 & -x^2 \\
+            0 & 1 & 0 \\
+            1 & 0 & x^3
+        \end{bmatrix}
+        .
+    \end{equation*}
+    If we denote the rows of the \(3\times3\) identity matrix by \(\epsilon_1\), \(\epsilon_2\), \(\epsilon_3\), then
+    \begin{equation*}
+        D\left(A\right)=D\left(x\epsilon_1-x^2\epsilon_3,\epsilon_2,\epsilon_1+x^3\epsilon_3\right).
+    \end{equation*}
+    Since \(D\) is linear as a function of each row,
+    \begin{align*}
+        D\left(A\right)&=xD\left(\epsilon_1,\epsilon_2,\epsilon_1+x^3\epsilon_3\right)-x^2D\left(\epsilon_3,\epsilon_2,\epsilon_1+x^3\epsilon_3\right)\\
+        &=xD\left(\epsilon_1,\epsilon_2,\epsilon_1\right)+x^4D\left(\epsilon_1,\epsilon_2,\epsilon_3\right)-x^2D\left(\epsilon_3,\epsilon_2,\epsilon_1\right)-x^5D\left(\epsilon_3,\epsilon_2,\epsilon_3\right).
+    \end{align*}
+    Because \(D\) is alternating it follows that
+    \begin{equation*}
+        D\left(A\right)=\left(x^4+x^2\right)D\left(\epsilon_1,\epsilon_2,\epsilon_3\right).
+    \end{equation*}
+\end{example}
+
+\begin{lemma}
+    Let \(D\) be a \(2\)-linear function with the property that \(D\left(A\right)=0\) for all \(2\times2\) matrices \(A\) over \(K\) having equal rows. Then \(D\) is alternating.
+\end{lemma}
+
+\begin{proof}
+    What we must show is that if \(A\) is a \(2\times2\) matrix and \(A'\) is obtained by interchanging the rows of \(A\), then \(D\left(A'\right)=-D\left(A\right)\). lf the rows of \(A\) are \(\alpha\) and \(\beta\), this means we must show that \(D\left(\beta,\alpha\right)=-D\left(\alpha,\beta\right)\). Since \(D\) is \(2\)-linear,
+    \begin{equation*}
+    D\left(\alpha+\beta,\alpha+\beta\right)=D\left(\alpha,\alpha\right)+D\left(\alpha,\beta\right)+D\left(\beta,\alpha\right)+D\left(\beta,\beta\right).
+    \end{equation*}
+    By our hypothesis \(D\left(\alpha+\beta,\alpha+\beta\right)=D\left(\alpha,\alpha\right)=D\left(\beta,\beta\right)=0\). So
+    \begin{equation*}
+        0=D\left(\alpha,\beta\right)+D\left(\beta,\alpha\right).\qedhere
+    \end{equation*}
+\end{proof}
+
+\begin{lemma}
+    Let \(D\) be an \(n\)-linear function on \(n\times n\) matrices over \(K\). Suppose \(D\) has the property that \(D\left(A\right)=0\) whenever two adjacent rows of \(A\) are equal. Then \(D\) is alternating.
+\end{lemma}
+
+\begin{proof}
+    % We must show that \(D\left(A\right)=0\) when any two rows of A are equal, and that D(A') = —D(A) if A' is obtained by interchanging 145 Determinants Chap. 5 some two rows of A. First, let us suppose that A' is obtained by inter¬ changing two adjacent rows of A. The reader should see that the argument used in the proof of the preceding lemma extends to the present case and gives us D(A') = —D(A). Now let B be obtained by interchanging rows i and j of A, where i < j. We can obtain B from A by a succession of interchanges of pairs of adjacent rows. We begin by interchanging row i with row (i -f- 1) and continue until the rows are in the order CL, • • • j —l, (X.)1, • • • , Oij, Oii) CCj+i, . . . , cxn. This requires k = j — i interchanges of adjacent rows. We now move aj to the zth position using (k — 1) interchanges of adjacent rows. We have thus obtained B from A by h + (k — 1) = 2k — 1 interchanges of adja¬ cent rows. Thus D(B) = (-l)2*-i D(A) = —D(A). Suppose A is any n X n matrix with two equal rows, say = aj with i < j. If j — i + 1, then A has two equal and adjacent rows and D(A) = 0. If j > i + 1, we interchange ai+ and cq and the resulting matrix B has two equal and adjacent rows, so D(B) = 0. On the other hand, D(B) = —D(A), hence D(A) =0. |
+\end{proof}
+
+% Definition. If n > 1 and A is an n X n matrix over K, we let A(i|j) denote the (n — 1) X (n — 1) matrix obtained by deleting the ith row and j th column of A. If D is an (n — 1)-linear function and A is an n X n matrix, we put Du (A) = D[A(i|j)]. Theorem 1. Let n > 1 and let D be an alternating (n — 1 )-linear function on (n — 1) X (n — 1) matrices over K. For each j, 1 < j < n, the function Ej defined by (5-4) Ej(A) = S (-ly+'AuDiKA) i = 1 is an alternating n-linear function on n X n matrices A. If D is a determi¬ nant function, so is each Ej. Proof. If A is an n X n matrix, Dij(A) is independent of the zth row of A. Since D is (n — 1)-linear, it is clear that Dij is linear as a func¬ tion of any row except row i. Therefore AijDij(A) is an n-linear function of A. A linear combination of n-linear functions is n-linear; hence, Ej is n-linear. To prove that Ej is alternating, it will suffice to show that Ej(A) = 0 whenever A has two equal and adjacent rows. Suppose ak = ak+1. If i 9^ k and i ^ k + 1, the matrix A (i\j) has two equal rows, and thus Dij(A) = 0. Therefore Ej(A) = ( — l)k+]AkjDkj(A) + (— l)k+1+iA (jc+DjDyc+ujiA). Sec. 5.2 Since ak = a*+i, Determinant Functions Akj = A(k+i)j and A(k\j) = A (k + l|j). Clearly then Ej(A) = 0. Now suppose D is a determinant function. If /(n) is the n X n identity matrix, then Pn)(j\j) is the (n — 1) X (n — 1) identity matrix /(n_1). Since I[f = 8{j, it follows from (5-4) that (5-5) EjifM) = D(Pn~»). Now D(Pn~1)) = 1, so that Ej(Pn)) = 1 and Ej is a determinant func¬ tion. Corollary. Let K be a commutative ring with identity and let n he a positive integer. There exists at least one determinant function on KnXn. Proof. We have shown the existence of a determinant function on 1 X 1 matrices over K, and even on 2 X 2 matrices over K. Theorem 1 tells us explicitly how to construct a determinant function on n X n matrices, given such a function on (n — 1) X (n — 1) matrices. The corollary follows by induction. Example 5. If B is a 2 X 2 matrix over K, we let \B\ — B11B22 — B12B21. Then \B\ = D(B), where D is the determinant function on 2 X 2 matrices. We showed that this function on K2X2 is unique. Let A11 A = -4 21 4.31 412 413 422 423 432 433 be a 3 X 3 matrix over K. If we define E1} E2} E3 as in (5-4), then 413 (5-6) (5-7) (5-8) EM) = 4n EM) = 412 422 AZ2 421 43i EZ{A) = 4i3 421 43i 423 4 33 423 4 33 422 4 32 — 421 + 422 412 4 32 411 43i — 423 4n AZ\ 413 4 33 + 43i 412 4 13 4 33 — 4 32 412 AZ2 + 433 422 4n 421 4n 421 423 413 423 412 422 It follows from Theorem 1 that Eh E2, and E3 are determinant functions. Actually, as we shall show later, Ex = E2 = Ez, but this is not yet appar¬ ent even in this simple case. It could, however, be verified directly, by expanding each of the above expressions. Instead of doing this we give some specific examples. (a) Let K = R[x] and 4 = X — 1 X2 X3 0 x - 2 1 0 x - 3 147 0 Determinants Then and EM) = (x - 1) EM) = — x- 0 1 0 x — 3 + (* - 2) (x — l)(x — 2)(x — 3) £3(A) = x; 0 X - 2 x — 1 X2 0 0 = (x — l)(x — 2)(x — 3). (b) Let K = R and 0 1 0 0 0 1 1 Then Exercises Chap. 5 x - 2 1 0 x — 3 = (x — l)(x — 2)(x — 3) x — 1 x3 0 x — 3 0 0 + (x — 3) x — 1 X2 A = EM) EM) EM) 0 0 1 0 0 1 0 1 1 0 0 1 1 0 1 1 1.

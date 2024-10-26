@@ -1,7 +1,7 @@
 \section{Definition and Existence of the Integral}
 
 \begin{definition}\label{definition:6.1}
-    Let \(\left[a,b\right]\) be a given interval. By a \emph{partition} \(P\) of \(\left[a,b\right]\) we mean a finite set of points \(x_0\), \(x_1\), \ldots, \(x_n\), where
+    Let \(\left[a,b\right]\) be a given interval. By a \emph{partition} \(P\) of \(\left[a,b\right]\) we mean a finite set of points \(x_0\), \(x_1\), \(\ldots\), \(x_n\), where
     \begin{equation*}
         a=x_0\leqslant x_1\leqslant\cdots\leqslant x_{n-1}\leqslant x_n=b.
     \end{equation*}
@@ -18,8 +18,8 @@
     \end{align*}
     and finally
     \begin{align}
-        \upint_a^bf\odif{x}=\inf U\left(P,f\right),\label{eq:6.1}\\
-        \lowint_a^bf\odif{x}=\sup L\left(P,f\right),\label{eq:6.2}
+        \upint_a^bf\odif{x}&=\inf U\left(P,f\right),\label{eq:6.1}\\
+        \lowint_a^bf\odif{x}&=\sup L\left(P,f\right),\label{eq:6.2}
     \end{align}
     where the \(\inf\) and the \(\sup\) are taken over all partitions \(P\) of \(\left[a,b\right]\). The left members of \eqref{eq:6.1} and \eqref{eq:6.2} are called the \emph{upper} and \emph{lower Riemann integrals} of \(f\) over \(\left[a,b\right]\), respectively.
 
@@ -40,7 +40,7 @@
     \begin{equation*}
         m\left(b-a\right)\leqslant L\left(P,f\right)\leqslant U\left(P,f\right)\leqslant M\left(b-a\right),
     \end{equation*}
-    so that the numbers \(L\left(P,f\right)\) and \(U\left(P,f\right)\) form a bounded set. This shows that \emph{the upper and lower integrals are defined for every} bounded function \(f\). The question of their equality, and hence the question of the integrability of \(f\), is a more delicate one. Instead ofinvestigating it separately for the Riemann integral, we shall immediately consider a more general situation.
+    so that the numbers \(L\left(P,f\right)\) and \(U\left(P,f\right)\) form a bounded set. This shows that \emph{the upper and lower integrals are defined for every} bounded function \(f\). The question of their equality, and hence the question of the integrability of \(f\), is a more delicate one. Instead of investigating it separately for the Riemann integral, we shall immediately consider a more general situation.
 \end{definition}
 
 \begin{definition}
@@ -182,4 +182,136 @@ We shall now investigate the existence of the integral \eqref{eq:6.7}. Without s
 
 Theorem~\ref{theorem:6.3} furnishes a convenient criterion for integrability. Before we apply it, we state some closely related facts.
 
-% 6.7 Theorem (a) IfXI3) holdsfor some P and some e, then (13) holds (with the same e) for every refinement ofP. (b) If (13) holds for P = {x , . . . ,  xn}  and if st , /, are arbitrary points in il/W-/(',)|Aa,<e. 1=1 (c) //ye £?(a) and the hypotheses of(b) hold, then < I J=l JA Proof Theorem 6.4 implies (a). Under the assumptions made in (b), bothf(Si) andf(t{ ) lie in [w, ,  A/,], so that \f(s{)-/(/,) |  < vV/,- w, .  Thus I l/(*i)-/Ml Aa, * W/> «) ~ W>/> «), i=l which proves (b). The obvious inequalities £*/>,/, a) < Zfttd Aa, < U(P,fx) and prove (c). L(P,/, a) < Ifda < U(P,f a) 6.8 Theorem 7/"/w continuous on [a, b] thenfe £?(a) on [a, b]. (16) Proof Let e > be given. Choose n > so that [«(&)- <x(a)]n < e. Since /is uniformly continuous on [a, b] (Theorem 4.19), there exists a 6 > such that \f(x)-f(t)\ <rj = 126 PRINCIPLES OF MATHEMATICAL ANALYSIS (17) if x e [a, b), t 6 [a, b], and  |  x- t \  < S. If jP is any partition of [a, b] such that A.v, < 6 for all /,  then (16) implies that Mi-m^t] (f-1, ...,#») and therefore {/(/>,/, a)- L(P,/ a) = Y (Mi- mj Aa, n < >7 = i » £ Aa,- = //[a(&)- a(a)] < e. By Theorem 6.6, /e #(a). 6.9 Theorem Iff is monotonic on [a, b], and if a is continuous on [a, b], then fe ^2(a). (We still assume, ofcourse, that a is monotonic.) Proof Let e > be given. For any positive integer n, choose a partition such that Aa, (i n = \, ...,n). This is possible since a is continuous (Theorem 4.23). We suppose that/is monotonically increasing (the proof is analogous in the other case). Then M^Ax,), so that /»,=/(*,_,) (i = 1,...,/i), U(P,f, a)- UPJ, «) = g(6) ~ M(a) f [/(*,)-/(or,.,)] n if a? is taken large enough. By Theorem 6.6, fe 3?(ct). 6.10 Theorem Suppose f is bounded on [a, b], f has only finitely many points of discontinuity on [a, b], and a is continuous at every point at which f is discon tinuous. Thenfe@(cc). Proof Let e > be given. Put M = sup \f(x)\ ,  let  E be the set of points at which /is discontinuous. Since E is finite and a is continuous at every point of E, we can cover E by finitely many disjoint intervals [uj, Vj]  c [a, b] such that the sum of the corresponding differences a(Vj) — ol(Uj) is less than e. Furthermore, we can place these intervals in such a way that every point of E n (a, b) lies in the interior of some [uj ,  pj. THE RIEMANN-STIELTJES INTEGRAL 127 Remove the segments (w, ,  Vj) from [a, b). The remaining set K is compact. Hence /is uniformly continuous on K, and there exists 5 > such that |/(j)-/(/)| <£ \tseK, t e K, \s- t\  < S. Now form a partition P = {x ,  xlt . .  ., xn}  of [a, b], as follows: Each Uj occurs in P. Each Vj occurs in P. No point ofany segment (ujy vj) occurs in P. If a / _ 1  is not one of the Uj ,  then Ax, < 6. Note that A/,- m, < 2A/ for every /,  and that /V/ f  — m %  < e unless *,_! is one of the w,-. Hence, as in the proof of Theorem 6.8, U(P,f a)- L(?,/, a) < [a(Z>)- x(a)]e + 2Me. Since e is arbitrary, Theorem 6.6 shows that/e M{v). Note: Iffand a have a common point of discontinuity, then /need not be in &(y). Exercise 3 shows this. 6.11 Theorem Suppose fe Mix) on [a, b],  m <f< M, (j> is continuous on [m, M), and h(x) = (f>(f(x)) on [a, b]. Then h e #{?) on [a, b]. Proof Choose e > 0. Since $ is uniformly continuous on [m, A/], there exists (5>0 such that 6 < c and \<l>(s)- </>(t)\  <e if \s- t\  <5 and s, t e [w, M]. Sincefe %{?), there is a partition P = {x ,  x^, that (18) U(P,f, a)- L(P,f a) < S2 . xn}  of [a, b] such Let A/,-, nij have the same meaning as in Definition 6.1, and let A/,*, m* be the analogous numbers for h. Divide the numbers 1, .  .., n into two classes: / e A if A/,  — w, < S, i e B if  Mt  — m{  > 3. For ie'A, our choice of S shows that M* — mf < e. For i e 5, Mf- w* < 2K, where A"= sup| <£(0| ,  /" < f  < A/. By (18), we have (19) S X A«i < X (Af|- >»«) Aa,- < <5 2 <eB icfl so that Y,ieB Act-i  < £• It follows that U(P, h, a)- L(/>, /;, a) = X (M*- '«*) Aa,- + X M* ~ w?) Aa . i'e/4 / e B < e[a(6)- «(<?)] + 2Ac5 < e[a(ft)- a(fl) + 2A]. Since e was arbitrary, Theorem 6.6 implies that //  e @(cc). Remark: This theorem suggests the question: Just what functions are Riemann-integrable? The answer is given by Theorem 1  1.33(6).
+\begin{theorem}
+    \leavevmode
+    \begin{enumerate}
+        \item\label{itm:6.1.1} If \eqref{eq:6.13} holds for some \(P\) and some \(\varepsilon\), then \eqref{eq:6.13} holds (with the same \(\varepsilon\)) for every refinement of \(P\).
+        \item\label{itm:6.1.2} If \eqref{eq:6.13} holds for \(P=\set{x_0,\ldots,x_n}\) and if \(s_i\), \(t_i\) are arbitrary points in \(\left[x_{i-1},x_i\right]\), then
+        \begin{equation*}
+            \sum_{i=1}^n\abs[f\left(s_i\right)-f\left(t_i\right)]\increment\alpha_i<\varepsilon.
+        \end{equation*}
+        \item\label{itm:6.1.3} If \(f\in\symscr{R}\left(\alpha\right)\) and the hypotheses of \ref{itm:6.1.2} hold, then
+        \begin{equation*}
+            \abs[\sum_{i=1}^nf\left(t_i\right)\increment\alpha_i-\int_a^bf\odif{\alpha}]<\varepsilon.
+        \end{equation*}
+    \end{enumerate}
+\end{theorem}
+
+\begin{proof}
+    Theorem~\ref{theorem:6.1} implies \ref{itm:6.1.1}. Under the assumptions made in \ref{itm:6.1.2}, both \(f\left(s_i\right)\) and \(f\left(t_i\right)\) lie in \(\left[m_i,M_i\right]\), so that \(\abs[f\left(s_i\right)-f\left(t_i\right)]\leqslant M_i-m_i\). Thus
+    \begin{equation*}
+        \sum_{i=1}^n\abs[f\left(s_i\right)-f\left(t_i\right)]\increment\alpha_i\leqslant U\left(P,f,\alpha\right)-L\left(P,f,\alpha\right),
+    \end{equation*}
+    which proves \ref{itm:6.1.2}. The obvious inequalities
+    \begin{equation*}
+        L\left(P,f,\alpha\right)\leqslant\sum f\left(t_i\right)\increment\alpha_i\leqslant U\left(P,f,\alpha\right)
+    \end{equation*}
+    and
+    \begin{equation*}
+        L\left(P,f,\alpha\right)\leqslant\int f\odif{\alpha}\leqslant U\left(P,f,\alpha\right)
+    \end{equation*}
+    prove \ref{itm:6.1.3}.
+\end{proof}
+
+\begin{theorem}\label{theorem:6.5}
+    If \(f\) is continuous on \(\left[a,b\right]\) then \(f\in\symscr{R}\left(\alpha\right)\) on \(\left[a,b\right]\).
+\end{theorem}
+
+\begin{proof}
+    Let \(\varepsilon>0\) be given. Choose \(\eta>0\) so that
+    \begin{equation*}
+        \left[\alpha\left(b\right)-\alpha\left(a\right)\right]\eta<\varepsilon.
+    \end{equation*}
+    Since \(f\) is uniformly continuous on \(\left[a,b\right]\) (Theorem~\ref{theorem:4.?}), there exists a \(\delta>0\) such that
+    \begin{equation}
+        \abs[f\left(x\right)-f\left(t\right)]<\eta\label{eq:6.16}
+    \end{equation}
+    if \(x\in\left[a,b\right]\), \(t\in\left[a,b\right]\), and \(\abs[x-t]<\delta\).
+
+    If \(P\) is any partition of \(\left[a,b\right]\) such that \(\increment x_i<\delta\) for all \(i\),  then \eqref{eq:6.16} implies that
+    \begin{equation}
+        M_i-m_i\leqslant\eta\qquad\text{(\(i=1,\ldots,n\))}
+    \end{equation}
+    and therefore
+    \begin{align*}
+        U\left(P,f,\alpha\right)-L\left(P,f,\alpha\right)&=\sum_{i=1}^n\left(M_i-m_i\right)\increment\alpha_i\\
+        &\leqslant\eta\sum_{i=1}^n\increment\alpha_i=\eta\left[\alpha\left(b\right)-\alpha\left(a\right)\right]<\varepsilon.
+    \end{align*}
+    By Theorem~\ref{theorem:6.3}, \(f\in\symscr{R}\left(\alpha\right)\).
+\end{proof}
+
+\begin{theorem}
+    If \(f\) is monotonic on \(\left[a,b\right]\), and if \(\alpha\) is continuous on \(\left[a,b\right]\), then \(f\in\symscr{R}\left(\alpha\right)\). (We still assume, of course, that \(\alpha\) is monotonic.)
+\end{theorem}
+
+\begin{proof}
+    Let \(\varepsilon>0\) be given. For any positive integer \(n\), choose a partition such that
+    \begin{equation*}
+        \increment\alpha_i=\frac{\alpha\left(b\right)-\alpha\left(a\right)}{n}\qquad\text{(\(i=1,\ldots,n\))}.
+    \end{equation*}
+    This is possible since \(\alpha\) is continuous (Theorem~\ref{theorem:4.?}).
+
+    We suppose that \(f\) is monotonically increasing (the proof is analogous in the other case). Then
+    \begin{equation*}
+        M_i=f\left(x_i\right),\qquad m_i=f\left(x_{i-1}\right)\qquad\text{(\(i=1,\ldots,n\))},
+    \end{equation*}
+    so that
+    \begin{align*}
+        U\left(P,f,\alpha\right)-L\left(P,f,\alpha\right)&=\frac{\alpha\left(b\right)-\alpha\left(a\right)}{n}\sum_{i=1}^n\left[f\left(x_i\right)-f\left(x_{i-1}\right)\right]\\
+        &=\frac{\alpha\left(b\right)-\alpha\left(a\right)}{n}\cdot\left[f\left(b\right)-f\left(a\right)\right]<\varepsilon
+    \end{align*}
+    if \(n\) is taken large enough. By Theorem~\ref{theorem:6.3}, \(f\in\symscr{R}\left(\alpha\right)\).
+\end{proof}
+
+\begin{theorem}
+    Suppose \(f\) is bounded on \(\left[a,b\right]\), \(f\) has only finitely many points of discontinuity on \(\left[a,b\right]\), and \(\alpha\) is continuous at every point at which \(f\) is discontinuous. Then \(F\in\symscr{R}\left(\alpha\right)\).
+\end{theorem}
+
+\begin{proof}
+    Let \(\varepsilon>0\) be given. Put \(M=\sup\abs[f\left(x\right)]\), let \(E\) be the set of points at which \(f\) is discontinuous. Since \(E\) is finite and \(\alpha\) is continuous at every point of \(E\), we can cover \(E\) by finitely many disjoint intervals \(\left[u_j,v_j\right]\subset\left[a,b\right]\) such that the sum of the corresponding differences \(\alpha\left(v_j\right)-\alpha\left(u_j\right)\) is less than \(\varepsilon\). Furthermore, we can place these intervals in such a way that every point of \(E\cap\left(a,b\right)\) lies in the interior of some \(\left[u_j,v_j\right]\).
+
+    Remove the segments \(\left(u_j,v_j\right)\) from \(\left[a,b\right]\). The remaining set \(K\) is compact. Hence \(f\) is uniformly continuous on \(K\), and there exists \(\delta>0\) such that \(\abs[f\left(s\right)-f\left(t\right)]<\varepsilon\) if \(s\in K\), \(t\in K\), \(\abs[s-t]<\delta\).
+
+    Now form a partition \(P=\set{x_0,x_1,\ldots,x_n}\) of \(\left[a,b\right]\), as follows: Each \(u_j\) occurs in \(P\). Each \(v_j\) occurs in \(P\). No point of any segment \(\left(u_j,v_j\right)\) occurs in \(P\). If \(x_{i-1}\) is not one of the \(u_j\), then \(\increment x_i<\delta\).
+
+    Note that \(M_i-m_i\leqslant2M\) for every \(i\), and that \(M_i-m_i\leqslant\varepsilon\) unless \(x_{i-1}\) is one of the \(u_j\). Hence, as in the proof of Theorem~\ref{theorem:6.5},
+    \begin{equation*}
+        U\left(P,f,\alpha\right)-L\left(P,f,\alpha\right)\leqslant\left[\alpha\left(b\right)-\alpha\left(a\right)\right]\varepsilon+2M\varepsilon.
+    \end{equation*}
+    Since \(\varepsilon\) is arbitrary, Theorem~\ref{theorem:6.3} shows that \(f\in\symscr{R}\left(\alpha\right)\).
+\end{proof}
+
+\begin{note*}
+    If \(f\) and \(\alpha\) have a common point of discontinuity, then \(f\) need not be in \(\symscr{R}\left(\alpha\right)\). Exercise~\ref{exercise:6.3} shows this.
+\end{note*}
+
+\begin{theorem}
+    Suppose \(f\in\symscr{R}\left(\alpha\right)\) on \(\left[a,b\right]\), \(m\leqslant f\leqslant M\), \(\phi\) is continuous on \(\left[m,M\right]\), and \(h\left(x\right)=\phi\left(f\left(x\right)\right)\) on \(\left[a,b\right]\). Then \(h\in\symscr{R}\left(\alpha\right)\) on \(\left[a,b\right]\).
+\end{theorem}
+
+\begin{proof}
+    Choose \(\varepsilon>0\). Since \(\phi\) is uniformly continuous on \(\left[m,M\right]\), there exists \(\delta>0\) such that \(\delta<\varepsilon\) and \(\abs[\phi\left(s\right)-\phi\left(t\right)]<\varepsilon\) if \(\abs[s-t]\leqslant\delta\) and \(s,t\in\left[m,M\right]\).
+
+    Since \(f\in\symscr{R}\left(\alpha\right)\), there is a partition \(P=\set{x_0,x_1,\ldots,x_n}\) of \(\left[a,b\right]\) such that
+    \begin{equation}
+        U\left(P,f,\alpha\right)-L\left(P,f,\alpha\right)<\delta^2.\label{eq:6.18}
+    \end{equation}
+    Let \(M_i\), \(m_i\) have the same meaning as in Definition~\ref{definition:6.1}, and let \(M_i^*\), \(m_i^*\) be the analogous numbers for \(h\). Divide the numbers \(1\), \(\ldots\), \(n\) into two classes: \(i\in A\) if \(M_i-m_i<\delta\), \(i\in B\) if \(M_i-m_i\geqslant\delta\).
+
+    For \(i\in A\), our choice of \(\delta\) shows that \(M_i^*-m_i^*\leqslant\varepsilon\).
+    
+    For \(i\in B\), \(M_i^*-m_i^*\leqslant2K\), where \(K=\sup\abs[\phi\left(t\right)]\), \(m\leqslant t\leqslant M\). By \eqref{eq:6.18}, we have
+    \begin{equation}
+        \delta\sum_{i\in B}\increment\alpha_i\leqslant\sum_{i\in B}\left(M_i-m_i\right)\increment\alpha_i<\delta^2
+    \end{equation}
+    so that \(\sum_{i\in B}\increment\alpha_i<\delta\). It follows that
+    \begin{align*}
+        U\left(P,h,\alpha\right)-L\left(P,h,\alpha\right)&=\sum_{i\in A}\left(M_i^*-m_i^*\right)\increment\alpha_i+\sum_{i\in B}\left(M_i^*-m_i^*\right)\increment\alpha_i\\
+        &\leqslant\varepsilon\left[\alpha\left(b\right)-\alpha\left(a\right)\right]+2K\delta<\varepsilon\left[\alpha\left(b\right)-\alpha\left(a\right)+2K\right].
+    \end{align*}
+    Since \(\varepsilon\) was arbitrary, Theorem~\ref{theorem:6.3} implies that \(h\in\symscr{R}\left(\alpha\right)\).
+\end{proof}
+
+\begin{remark*}
+    This theorem suggests the question: Just what functions are Riemann-integrable? The answer is given by Theorem~\ref{theorem:11.?}\ref{itm:11.?}.
+\end{remark*}

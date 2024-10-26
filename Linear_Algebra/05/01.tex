@@ -1,0 +1,27 @@
+\section{Commutative Rings}
+
+In this chapter we shall prove the essential facts about determinants of square matrices. We shall do this not only for matrices over a field, but also for matrices with entries which are `scalars' of a more general type. There are two reasons for this generality. First, at certain points in the next chapter, we shall find it necessary to deal with determinants of matrices with polynomial entries. Second, in the treatment of determinants which we present, one of the axioms for a field plays no role, namely, the axiom which guarantees a multiplicative inverse for each non-zero element. For these reasons, it is appropriate to develop the theory of determinants for matrices, the entries of which are elements from a commutative ring with identity.
+
+\begin{definition}
+    A \emph{ring} is a set \(K\), together with two operations \(\left(x,y\right)\to x+y\) and \(\left(x,y\right)\to xy\) satisfying
+    \begin{enumerate}
+        \item \(K\) is a commutative group under the operation \(\left(x,y\right)\to x+y\) (\(K\) is a commutative group under addition);
+        \item \(\left(xy\right)z=x\left(yz\right)\) (multiplication is associative);
+        \item \(x\left(y+z\right)=xy+xz\); \(\left(y+z\right)x=yx+zx\) (the two distributive laws hold).
+    \end{enumerate}
+    If \(xy=yx\) for all \(x\) and \(y\) in \(K\), we say that the ring \(K\) is \emph{commutative}. If there is an element \(1\) in \(K\) such that \(1x=x1=x\) for each \(x\), \(K\) is said to be a \emph{ring with identity}, and \(1\) is called the \emph{identity} for \(K\). 
+\end{definition}
+
+We are interested here in commutative rings with identity. Such a ring can be described briefly as a set \(K\), together with two operations which satisfy all the axioms for a field given in Chapter~\ref{chap:1}, except possibly for axiom~\ref{itm:1.?} and the condition \(1\ne0\). Thus, a field is a commutative ring with non-zero identity such that to each non-zero \(x\) there corresponds an element \(x^{-1}\) with \(xx^{-1}=1\). The set of integers, with the usual operations, is a commutative ring with identity which is not a field. Another commutative ring with identity is the set of all polynomials over a field, together with the addition and multiplication which we have defined for polynomials.
+
+If \(K\) is a commutative ring with identity, we define an \(m\times n\) matrix over \(K\) to be a function \(A\) from the set of pairs \(\left(i,j\right)\) of integers, \(1\leqslant i\leqslant m\), \(1\leqslant j\leqslant n\), into \(K\). As usual we represent such a matrix by a rectangular array having \(m\) rows and \(n\) columns. The sum and product of matrices over \(K\) are defined as for matrices over a field
+\begin{align*}
+    \left(A+B\right)_{ij}=A_{ij}+B_{ij},\\
+    \left(AB\right)_{ij}=\sum_kA_{ik}B_{kj},
+\end{align*}
+the sum being defined when \(A\) and \(B\) have the same number of rows and the same number of columns, the product being defined when the number of columns of \(A\) is equal to the number of rows of \(B\). The basic algebraic properties of these operations are again valid. For example,
+\begin{equation*}
+    A\left(B+C\right)=AB+AC,\qquad\left(AB\right)C=A\left(BC\right),\qquad\text{etc.}
+\end{equation*}
+
+As in the case of fields, we shall refer to the elements of \(K\) as scalars. We may then define linear combinations of the rows or columns of a matrix as we did earlier. Roughly speaking, all that we previously did for matrices over a field is valid for matrices over \(K\), excluding those results which depended upon the ability to `divide' in \(K\).

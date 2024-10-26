@@ -1,0 +1,149 @@
+\section{D'Alembert's Principle and Lagrange's Equations}
+
+A virtual (infinitesimal) displacement of a system refers to a change in the configuration of the system as the result of any arbitrary infinitesimal change of the coordinates \(\fdif{\symbf{r}_i}\), \emph{consistent with the forces and constraints imposed on the system at the given instant \(t\)}. The displacement is called virtual to distinguish it from an actual displacement of the system occurring in a time interval \(\odif{t}\), during which the forces and constraints may be changing. Suppose the system is in equilibrium; i.e., the total force on each particle vanishes, \(\symbf{F}_i=0\). Then clearly the dot product \(\symbf{F}_i\cdot\fdif{\symbf{r}_i}\), which is the virtual work of the force \(\symbf{F}_i\) in the displacement \(\fdif{\symbf{r}_i}\), also vanishes. The sum of these vanishing products over all particles must likewise be zero:
+\begin{equation}
+    \sum_i\symbf{F}_i\cdot\fdif{\symbf{r}_i}=0.\label{eq:1.40}
+\end{equation}
+As yet nothing has been said that has any new physical content. Decompose \(\symbf{F}_i\) into the applied force, \(\symbf{F}_i^{\left(a\right)}\), and the force of constraint, \(\symbf{f}_i\),
+\begin{equation}
+    \symbf{F}_i=\symbf{F}_i^{\left(a\right)}+\symbf{f}_i,
+\end{equation}
+so that Eq.~\eqref{eq:1.40} becomes
+\begin{equation}
+    \sum_i\symbf{F}_i^{\left(a\right)}\cdot\fdif{\symbf{r}_i}+\sum_i\symbf{f}_i\cdot\fdif{\symbf{r}_i}=0.
+\end{equation}
+We now restrict ourselves to systems for which \emph{the net virtual work of the forces of constraint is zero}. We have seen that this condition holds true for rigid bodies and it is valid for a large number of other constraints. Thus, if a particle is constrained to move on a surface, the force of constraint is perpendicular to the surface, while the virtual displacement must be tangent to it, and hence the virtual work vanishes. This is no longer true if sliding friction forces are present, and we must exclude such systems from our formulation. The restriction is not unduly hampering, since the friction is essentially a macroscopic phenomenon. On the other hand, the forces of rolling friction do not violate this condition, since the forces act on a point that is momentarily at rest and can do no work in an infinitesimal displacement consistent with the rolling constraint. Note that if a particle is constrained to a surface that is itself moving in time, the force of constraint is instantaneously perpendicular to the surface and the work during a virtual displacement is still zero even though the work during an actual displacement in the time \(\odif{t}\) does not necessarily vanish.
+
+We therefore have as the condition for equilibrium of a system that the virtual work of the \emph{applied forces} vanishes:
+\begin{equation}
+    \sum_i\symbf{F}_i^{\left(a\right)}\cdot\fdif{\symbf{r}_i}=0.\label{eq:1.43}
+\end{equation}
+Equation~\eqref{eq:1.43} is often called the \emph{principle of virtual work}. Note that the coefficients of \(\fdif{\symbf{r}_i}\) can no longer be set equal to zero; 1.e., in general \(\symbf{F}_i^{\left(a\right)}\ne0\), since the \(\fdif{\symbf{r}_i}\) are not completely independent but are connected by the constraints. In order to equate the coefficients to zero, we must transform the principle into a form involving the virtual displacements of the \(q_i\), which are independent. Equation \eqref{eq:1.43} satisfies our needs in that it does not contain the \(\symbf{f}_i\), but it deals only with statics; we want a condition involving the general motion of the system.
+
+To obtain such a principle, we use a device first thought of by James Bernoulli and developed by D'Alembert. The equation of motion,
+\begin{equation*}
+    \symbf{F}_i=\dot{\symbf{p}}_i,
+\end{equation*}
+can be written as
+\begin{equation*}
+    \symbf{F}_i-\dot{\symbf{p}}_i=0,
+\end{equation*}
+which states that the particles in the system will be in equilibrium under a force equal to the actual force plus a ``reversed effective force" \(-\dot{\symbf{p}}_i\). Instead of \eqref{eq:1.40}, we can immediately write
+\begin{equation}
+    \sum_i\left(\symbf{F}-\dot{\symbf{p}}_i\right)\cdot\fdif{\symbf{r}_i}=0,
+\end{equation}
+and, making the same resolution into applied forces and forces of constraint, there results
+\begin{equation*}
+    \sum_i\left(\symbf{F}_i^{\left(a\right)}-\dot{\symbf{p}}_i\right)\cdot\fdif{\symbf{r}_i}+\sum_i\symbf{f}_i\cdot\fdif{\symbf{r}_i}=0.
+\end{equation*}
+We again restrict ourselves to systems for which the virtual work of the forces of constraint vanishes and therefore obtain
+\begin{equation}
+    \sum_i\left(\symbf{F}_i^{\left(a\right)}-\dot{\symbf{p}}_i\right)\cdot\fdif{\symbf{r}_i}=0,\label{eq:1.45}
+\end{equation}
+which is often called \emph{D'Alembert's principle}. We have achieved our aim, in that the forces of constraint no longer appear, and the superscript \(^{\left(a\right)}\) can now be dropped without ambiguity. It is still not in a useful form to furnish equations of motion for the system. We must now transform the principle into an expression involving virtual displacements of the generalized coordinates, which are then independent of each other (for holonomic constraints), so that the coefficients of the \(\fdif{q_i}\) can be set separately equal to zero.
+
+The translation from \(\symbf{r}_i\) to \(q_j\) language starts from the transformation equations~\eqref{eq:1.38},
+\begin{equation}
+    \symbf{r}_i=\symbf{r}_i\left(q_1,q_2,\ldots,q_n,t\right)\tag{\ref{eq:1.45}\prime}
+\end{equation}
+(assuming \(n\) independent coordinates), and is carried out by means of the usual ``chain rules" of the calculus of partial differentiation. Thus, \(\symbf{v}_i\) is expressed in terms of the \(\dot{q}_k\) by the formula
+\begin{equation}
+    \symbf{v}_i\equiv\odv{\symbf{r}_i}{t}=\sum_k\pdv{\symbf{r}_i}{q_k}\dot{q}_k+\pdv{\symbf{r}_i}{t}.\label{eq:1.46}
+\end{equation}
+Similarly, the arbitrary virtual displacement \(\fdif{\symbf{r}_i}\) can be connected with the virtual displacements \(\fdif{q_i}\) by
+\begin{equation}
+    \fdif{\symbf{r}_i}=\sum_j\pdv{\symbf{r}_i}{q_j}\fdif{q_j}.\label{eq:1.47}
+\end{equation}
+Note that no variation of time, \(\fdif{t}\), is involved here, since a virtual displacement by definition considers only displacements of the coordinates. (Only then is the virtual displacement perpendicular to the force of constraint if the constraint itself is changing in time.)
+
+In terms of the generalized coordinates, the virtual work of the \(\symbf{F}_i\) becomes
+\begin{equation}
+    \begin{aligned}[t]
+        \sum_i\symbf{F}_i\cdot\fdif{\symbf{r}_i}&=\sum_{i,j}\symbf{F}_i\cdot\pdv{\symbf{r}_i}{q_j}\fdif{q_j}\\
+        &=\sum_jQ_j\fdif{q_j},
+    \end{aligned}
+\end{equation}
+where the \(Q_j\) are called the components of the \emph{generalized force}, defined as
+\begin{equation}
+    Q_j=\sum_i\symbf{F}_i\cdot\pdv{\symbf{r}_i}{q_j}.\label{eq:1.49}
+\end{equation}
+Note that just as the \(q\)'s need not have the dimensions of length, so the \(Q\)'s do not necessarily have the dimensions of force, but \(Q_j\fdif{q_j}\) must always have the dimensions of work. For example, \(Q_j\) might be a torque \(N_j\) and \(\odif{q_j}\) a differential angle \(\odif{\theta_j}\), which makes \(N_j\odif{\theta_j}\) a differential of work.
+
+We turn now to the other other term involved in Eq.~\eqref{eq:1.45}, which may be written as
+\begin{equation*}
+    \sum_i\dot{\symbf{p}}_i\cdot\fdif{\symbf{r}_i}=\sum_im_i\ddot{\symbf{r}}_i\cdot\fdif{\symbf{r}_i}.
+\end{equation*}
+Expressing \(\fdif{\symbf{r}_i}\) by \eqref{eq:1.47}, this becomes
+\begin{equation*}
+    \sum_{i,j}m_i\ddot{\symbf{r}}_i\cdot\pdv{\symbf{r}_i}{q_j}\fdif{q_j}.
+\end{equation*}
+Consider now the relation
+\begin{equation}
+    \sum_im_i\ddot{\symbf{r}}_i\cdot\pdv{\symbf{r}_i}{q_j}=\sum_i\left[\odv*{\left(m_i\dot{\symbf{r}}_i\cdot\pdv{\symbf{r}_i}{q_j}\right)}{t}-m_i\dot{\symbf{r}}_i\cdot\odv*{\left(\pdv{\symbf{r}_i}{q_j}\right)}{t}\right].\label{eq:1.50}
+\end{equation}
+In the last term of Eq.~\eqref{eq:1.50} we can interchange the differentiation with respect to \(t\) and \(q_j\), for, in analogy to \eqref{eq:1.46},
+\begin{equation*}
+    \begin{aligned}
+        \odv*{\left(\pdv{\symbf{r}_i}{q_j}\right)}{t}&=\pdv{\dot{\symbf{r}}_i}{q_j}=\sum_k\pdv{\symbf{r}_i}{q_j,q_k}\dot{q}_k+\pdv{\symbf{r}_i}{q_j,t},\\
+        &=\pdv{\symbf{v}_i}{q_j},
+    \end{aligned}
+\end{equation*}
+by Eq.~\eqref{eq:1.46}. Further, we also see from Eq.~\eqref{eq:1.46} that
+\begin{equation}
+    \pdv{\symbf{v}_i}{\dot{q}_j}=\pdv{\symbf{r}_i}{q_j}.
+\end{equation}
+Substitution of these changes in \eqref{eq:1.50} leads to the result that
+\begin{equation*}
+    \sum_im_i\ddot{\symbf{r}}_i\cdot\pdv{\symbf{r}_i}{q_j}=\sum_i\left[\odv*{\left(m_i\symbf{v}_i\cdot\pdv{\symbf{v}_i}{\dot{q}_j}\right)}{t}-m_i\symbf{v}_i\cdot\pdv{\symbf{v}_i}{q_j}\right],
+\end{equation*}
+and the second term on the left-hand side of Eq.~\eqref{eq:1.45} can be expanded into
+\begin{equation*}
+    \sum_j\left\{\odv*{\left[\pdv*{\left(\sum_i\frac{1}{2}m_iv_i^2\right)}{\dot{q}_j}\right]}{t}-\pdv*{\left(\sum_i\frac{1}{2}m_iv_i^2\right)}{q_j}\right\}\fdif{q_j}.
+\end{equation*}
+Identifying \(\sum_i\frac{1}{2}m_iv_i^2\) with the system kinetic energy \(T\), D'Alembert's principle (cf. Eq.~\eqref{eq:1.45}) becomes
+\begin{equation}
+    \sum\left\{\left[\odv*{\left(\pdv{T}{\dot{q}_j}\right)}{t}-\pdv{T}{q_j}\right]-Q_j\right\}\fdif{q_j}=0.\label{eq:1.52}
+\end{equation}
+Note that in a system of Cartesian coordinates the partial derivative of \(T\) with respect to \(q_j\) vanishes. Thus, speaking in the language of differential geometry, this term arises from the curvature of the coordinates \(q_j\). In polar coordinates, e.g., it is in the partial derivative of \(T\) with respect to an angle coordinate that the centripetal acceleration term appears.
+
+Thus far, no restriction has been made on the nature of the constraints other than that they be workless in a virtual displacement. The variables \(q_j\) can be any set of coordinates used to describe the motion of the system. If, however, the constraints are holonomic, then it is possible to find sets of independent coordinates \(q_j\) that contain the constraint conditions implicitly in the transformation equations \eqref{eq:1.38}. Any virtual displacement \(\fdif{q_j}\) is then independent of \(\fdif{q_k}\), and therefore the only way for \eqref{eq:1.52} to hold is for the individual coefficients to vanish:
+\begin{equation}
+    \odv*{\left(\pdv{T}{\dot{q}_j}\right)}{t}-\pdv{T}{q_j}=Q_j.\label{eq:1.53}
+\end{equation}
+There are \(n\) such equations in all.
+
+When the forces are derivable from a scalar potential function \(V\),
+\begin{equation*}
+    \symbf{F}_i=-\symbf{\nabla}_iV.
+\end{equation*}
+Then the generalized forces can be written as
+\begin{equation*}
+    Q_j=\sum_i\symbf{F}_i\cdot\pdv{\symbf{r}_i}{q_i}=-\sum_i\symbf{\nabla}_iV\cdot\pdv{\symbf{r}_i}{q_j},
+\end{equation*}
+which is exactly the same expression for the partial derivative of a function \(-V\left(\symbf{r}_1,\symbf{r}_2,\ldots,\symbf{r}_N,t\right)\) with respect to \(q_j\):
+\begin{equation}
+    Q_j=-\pdv{V}{q_j}.
+\end{equation}
+Equations~\eqref{eq:1.53} can then be rewritten as
+\begin{equation}
+    \odv*{\left(\pdv{T}{\dot{q}_j}\right)}{t}-\pdv{\left(T-V\right)}{q_j}=0.\label{eq:1.55}
+\end{equation}
+The equations of motion in the form \eqref{eq:1.55} are not necessarily restricted to conservative systems; only if \(V\) is not an explicit function of time is the system conservative (cf. p. \pageref{anchor:1.1}). As here defined, the potential \(V\) does not depend on the generalized velocities. Hence, we can include a term in \(V\) in the partial derivative with respect to \(\dot{q}_j\):
+\begin{equation*}
+    \odv*{\left(\pdv{\left(T-V\right)}{\dot{q}_j}\right)}{t}-\pdv{\left(T-V\right)}{q_j}=0.
+\end{equation*}
+Or, defining a new function, the \emph{Lagrangian} \(L\), as
+\begin{equation}
+    L=T-V,\label{eq:1.56}
+\end{equation}
+the Eqs.~\eqref{eq:1.53} become
+\begin{equation}
+    \odv*{\left(\pdv{L}{\dot{q}_j}\right)}{t}-\pdv{L}{q_j}=0.\label{eq:1.57}
+\end{equation}
+expressions referred to as ``Lagrange's equations."
+
+Note that for a particular set of equations of motion there is no unique choice of Lagrangian such that Eqs.~\eqref{eq:1.57} lead to the equations of motion in the given generalized coordinates. Thus, in Derivations~\ref{derivation:1.8} and \ref{derivation:1.10} it is shown that if \(L\left(q,\dot{q},t\right)\) is an approximate Lagrangian and \(F\left(q,t\right)\) is \emph{any} differentiable function of the generalized coordinates and time, then
+\begin{equation}
+    L'\left(q,\dot{q},t\right)=L\left(q,\dot{q},t\right)+\odv{F}{t}\tag{\ref{eq:1.57}\prime}\label{eq:1.57'}
+\end{equation}
+is a Lagrangian also resulting in the same equations of motion. It is also often possible to find alternative Lagrangians beside those constructed by this prescription (see Exercise~\ref{exercise:1.20}). While Eq.~\eqref{eq:1.56} is always a suitable way to construct a Lagrangian for a conservative system, it does not provide the only Lagrangian suitable for the given system.
