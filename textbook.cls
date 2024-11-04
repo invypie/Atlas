@@ -1,1 +1,0 @@
-/home/atlas/texmf/tex/latex/textbook/textbook.cls
