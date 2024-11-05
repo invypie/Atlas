@@ -187,7 +187,7 @@
 \def\iffcolon{\DOTSB\;\Longleftrightarrow:\;}
 
 \newcommand*\transpose{{\mathpalette\@transpose{}}}
-\newcommand*\@transpose[1]{\raisebox{\depth}{\(\m@th#1\intercal\)}}
+\newcommand*\@transpose[1]{\raisebox\depth{\(\m@th#1\top\)}}
 
 \DeclareDerivative{\fdv}{\symup{\delta}}
 \DeclareDerivative{\adv}{\symup{\Delta}}
