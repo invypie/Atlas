@@ -3,13 +3,13 @@
 In this chapter we shall prove the essential facts about determinants of square matrices. We shall do this not only for matrices over a field, but also for matrices with entries which are `scalars' of a more general type. There are two reasons for this generality. First, at certain points in the next chapter, we shall find it necessary to deal with determinants of matrices with polynomial entries. Second, in the treatment of determinants which we present, one of the axioms for a field plays no role, namely, the axiom which guarantees a multiplicative inverse for each non-zero element. For these reasons, it is appropriate to develop the theory of determinants for matrices, the entries of which are elements from a commutative ring with identity.
 
 \begin{definition}
-    A \emph{ring} is a set \(K\), together with two operations \(\left(x,y\right)\to x+y\) and \(\left(x,y\right)\to xy\) satisfying
+    A \bfidx{ring} is a set \(K\), together with two operations \(\left(x,y\right)\to x+y\) and \(\left(x,y\right)\to xy\) satisfying
     \begin{enumerate}
         \item \(K\) is a commutative group under the operation \(\left(x,y\right)\to x+y\) (\(K\) is a commutative group under addition);
         \item \(\left(xy\right)z=x\left(yz\right)\) (multiplication is associative);
         \item \(x\left(y+z\right)=xy+xz\); \(\left(y+z\right)x=yx+zx\) (the two distributive laws hold).
     \end{enumerate}
-    If \(xy=yx\) for all \(x\) and \(y\) in \(K\), we say that the ring \(K\) is \emph{commutative}. If there is an element \(1\) in \(K\) such that \(1x=x1=x\) for each \(x\), \(K\) is said to be a \emph{ring with identity}, and \(1\) is called the \emph{identity} for \(K\). 
+    If \(xy=yx\) for all \(x\) and \(y\) in \(K\), we say that the ring \(K\) is \bfidx[commutative!ring]{commutative}. If there is an element \(1\) in \(K\) such that \(1x=x1=x\) for each \(x\), \(K\) is said to be a \bfidx[identity!element]{ring with identity}, and \(1\) is called the \bfidx[identity!element]{identity} for \(K\). 
 \end{definition}
 
 We are interested here in commutative rings with identity. Such a ring can be described briefly as a set \(K\), together with two operations which satisfy all the axioms for a field given in Chapter~\ref{chap:1}, except possibly for axiom~\ref{itm:1.?} and the condition \(1\ne0\). Thus, a field is a commutative ring with non-zero identity such that to each non-zero \(x\) there corresponds an element \(x^{-1}\) with \(xx^{-1}=1\). The set of integers, with the usual operations, is a commutative ring with identity which is not a field. Another commutative ring with identity is the set of all polynomials over a field, together with the addition and multiplication which we have defined for polynomials.

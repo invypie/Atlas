@@ -5,7 +5,7 @@ Let \(K\) be a commutative ring with identity. We wish to assign to each \(n\tim
 This section will be devoted to the definition of `determinant function' and to the proof that at least one such function exists.
 
 \begin{definition}
-    Let \(K\) be a commutative ring with identity, \(n\) a positive integer, and let \(D\) be a function which assigns to each \(n\times n\) matrix \(A\) over \(K\) a scalar \(D\left(A\right)\) in \(K\). We say that \(D\) is \emph{\(n\)-linear} if for each \(i\), \(1\leqslant i\leqslant n\), \(D\) is a linear function of the \(i\)th row when the other \(\left(n-1\right)\) rows are held fixed.
+    Let \(K\) be a commutative ring with identity, \(n\) a positive integer, and let \(D\) be a function which assigns to each \(n\times n\) matrix \(A\) over \(K\) a scalar \(D\left(A\right)\) in \(K\). We say that \(D\) is \bfidx[\(n\)-linear function]{\(n\)-linear} if for each \(i\), \(1\leqslant i\leqslant n\), \(D\) is a linear function of the \(i\)th row when the other \(\left(n-1\right)\) rows are held fixed.
 \end{definition}
 
 This definition requires some clarification. If \(D\) is a function from \(K^{n\times n}\) into \(K\), and if \(\alpha_1\), \(\ldots\), \(\alpha_n\) are the rows of the matrix \(A\), let us also write
@@ -117,7 +117,7 @@ If \(K\) is a field and \(V\) is the set of \(n\times n\) matrices over \(K\), t
 \end{example}
 
 \begin{definition}
-    Let \(D\) be an \(n\)-linear function. We say \(D\) is \emph{alternating} (or \emph{alternate}) if the following two conditions are satisfied:
+    Let \(D\) be an \(n\)-linear function. We say \(D\) is \bfidx[\(n\)-linear function!alternating]{alternating} (or \bfidx[\(n\)-linear function!alternating]{alternate}) if the following two conditions are satisfied:
     \begin{enumerate}
         \item\label{itm:5.2.1} \(D\left(A\right)=0\) whenever two rows of \(A\) are equal.
         \item\label{itm:5.2.2} If \(A'\) is a matrix obtained from \(A\) by interchanging two rows of \(A\), then \(D\left(A'\right)=-D\left(A\right)\).
@@ -127,7 +127,7 @@ If \(K\) is a field and \(V\) is the set of \(n\times n\) matrices over \(K\), t
 We shall prove below that any \(n\)-linear function \(D\) which satisfies \ref{itm:5.2.1} automatically satisfies \ref{itm:5.2.2}. We have put both properties in the definition of alternating \(n\)-linear function as a matter of convenience. The reader will probably also note that if \(D\) satisfies \ref{itm:5.2.2} and \(A\) is a matrix with two equal rows, then \(D\left(A\right)=-D\left(A\right)\). It is tempting to conclude that \(D\) satisfies condition~\ref{itm:5.2.1} as well. This is true, for example, if \(K\) is a field in which \(1+1\ne0\), but in general \ref{itm:5.2.1} is not a consequence of \ref{itm:5.2.1}.
 
 \begin{definition}
-    Let \(K\) be a commutative ring with identity, and let \(n\) be a: positive integer. Suppose \(D\) is a function from \(n\times n\) matrices over \(K\) into \(K\). We say that \(D\) is a \emph{determinant function} if \(D\) is \(n\)-linear, alternating, and \(D\left(I\right)=1\).
+    Let \(K\) be a commutative ring with identity, and let \(n\) be a: positive integer. Suppose \(D\) is a function from \(n\times n\) matrices over \(K\) into \(K\). We say that \(D\) is a \bfidx{determinant function} if \(D\) is \(n\)-linear, alternating, and \(D\left(I\right)=1\).
 \end{definition}
 
 As we stated earlier, we shall ultimately show that there is exactly one determinant function on \(n\times n\) matrices over \(K\). This is easily seen for \(1\times1\) matrices \(A=\left[a\right]\) over \(K\). The function \(D\) given by \(D\left(A\right)=a\) is a determinant function, and clearly this is the only determinant function on \(1\times 1\) matrices. We are also in a position to dispose of the case \(n=2\). The function

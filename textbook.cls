@@ -236,6 +236,10 @@
 \setlist[enumerate, 3]{label = (\roman*), ref = (\roman*)}
 \setlist[enumerate, 4]{label = (\Alph*), ref = (\Alph*)}
 
+\RequirePackage{imakeidx}
+
+\newcommand\bfidx[2][]{\ifblank{#1}{\textbf{#2}\index{#2}}{\textbf{#2}\index{#1}}}
+
 \RequirePackage{fontspec}
 
 \defaultfontfeatures{Renderer = HarfBuzz}
@@ -259,6 +263,8 @@
     BoldItalicFont  = *-BoldOblique
 ]
 
+% \let\familydefault\sfdefault
+
 \RequirePackage{unicode-math}
 
 \unimathsetup{
@@ -272,6 +278,9 @@
 \setmathfont{NewCMMath-Book}[StylisticSet = 2]
 \setmathfont{NewCMMath-Book}[StylisticSet = 3, range = bb]
 \setmathfont{NewCMMath-Book}[StylisticSet = 1, range = {scr, bfscr}]
+
+% \setmathfont{NewCMSansMath-Regular}[StylisticSet = 2]
+% \setmathfont{NewCMSansMath-Regular}[StylisticSet = 1, range = {scr, bfscr}]
 
 \mathchardef\stdcomma=\mathcode`,
 \mathchardef\stdsemicolon=\mathcode`;
