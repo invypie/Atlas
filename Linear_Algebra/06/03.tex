@@ -1,0 +1,297 @@
+\section{Annihilating Polynomials}
+
+In attempting to analyze a linear operator \(T\), one of the most useful things to know is the class of polynomials which annihilate \(T\). Specifically, suppose \(T\) is a linear operator on \(V\), a vector space over the field \(F\). If \(p\) is a polynomial over \(F\), then \(p\left(T\right)\) is again a linear operator on \(V\). If \(q\) is another polynomial over \(F\), then
+\begin{align*}
+    \left(p+q\right)\left(T\right)&=p\left(T\right)+q\left(T\right)\\
+    \left(pq\right)\left(T\right)&=p\left(T\right)q\left(T\right).
+\end{align*}
+Therefore, the collection of polynomials \(p\) which annihilate \(T\), in the sense that
+\begin{equation*}
+    p\left(T\right)=0,
+\end{equation*}
+is an ideal in the polynomial algebra \(F\left[x\right]\). It may be the zero ideal, i.e., it may be that \(T\) is not annihilated by any non-zero polynomial. But, that cannot happen if the space \(V\) is finite-dimensional.
+
+Suppose \(T\) is a linear operator on the \(n\)-dimensional space \(V\). Look at the first \(\left(n^2+1\right)\) powers of \(T\):
+\begin{equation*}
+    I,T,T^2,\ldots,T^{n^2}.
+\end{equation*}
+This is a sequence of \(n^2+1\) operators in \(L\left(V,V\right)\), the space of linear operators on \(V\). The space \(L\left(V,V\right)\) has dimension \(n^2\). Therefore, that sequence of \(n^2+1\) operators must be linearly dependent, i.e., we have
+\begin{equation*}
+    c_0I+c_1T+\cdots+c_{n^2}T^{n^2}=0
+\end{equation*}
+for some scalars \(c_i\), not all zero. So, the ideal of polynomials which annihilate \(T\) contains a non-zero polynomial of degree \(n^2\) or less.
+
+According to Theorem~\ref{theorem:4.5} of Chapter~\ref{chap:4}, every polynomial ideal consists of all multiples of some fixed monic polynomial, the generator of the ideal. Thus, there corresponds to the operator \(T\) a monic polynomial \(p\) with this property: If \(f\) is a polynomial over \(F\), then \(f\left(T\right)=0\) if and only if \(f=pg\), where \(g\) is some polynomial over \(F\).
+
+\begin{definition}
+    Let \(T\) he a linear operator on a finite-dimensional vector space \(V\) over the field \(F\). The \bfidx{minimal polynomial} for \(T\) is the (unique) monic generator of the ideal of polynomials over \(F\) which annihilate \(T\).
+\end{definition}
+
+The name `minimal polynomial' stems from the fact that the generator of a polynomial ideal is characterized by being the monic polynomial of minimum degree in the ideal. That means that the minimal polynomial \(p\) for the linear operator \(T\) is uniquely determined by these three properties:
+\begin{enumerate}
+    \item \(p\) is a monic polynomial over the scalar field \(F\).
+    \item \(p\left(T\right)=0\).
+    \item No polynomial over \(F\) which annihilates \(T\) has smaller degree than \(p\) has.
+\end{enumerate}
+
+If \(A\) is an \(n\times n\) matrix over \(F\), we define the \bfidx{minimal polynomial} for \(A\) in an analogous way, as the unique monic generator of the ideal of all polynomials over \(F\) which annihilate \(A\). If the operator \(T\) is represented in some ordered basis by the matrix \(A\), then \(T\) and \(A\) have the same minimal polynomial. That is because \(f\left(T\right)\) is represented in the basis by the matrix \(f\left(A\right)\), so that \(f\left(T\right)=0\) if and only if \(f\left(A\right)=0\).
+
+From the last remark about operators and matrices it follows that similar matrices have the same minimal polynomial. That fact is also clear from the definitions because
+\begin{equation*}
+    f\left(P^{-1}AP\right)=P^{-1}f\left(A\right)P
+\end{equation*}
+for every polynomial \(f\).
+
+There is another basic remark which we should make about minimal polynomials of matrices. Suppose that \(A\) is an \(n\times n\) matrix with entries in the field \(F\). Suppose that \(F_1\) is a field which contains \(F\) as a subfield. (For example, \(A\) might be a matrix with rational entries, while \(F_1\) is the field of real numbers. Or, \(A\) might be a matrix with real entries, while \(F_1\) is the field of complex numbers.) We may regard \(A\) either as an \(n\times n\) matrix over \(F\) or as an \(n\times n\) matrix over \(F_1\). On the surface, it might appear that we obtain two different minimal polynomials for \(A\). Fortunately that is not the case; and we must see why. What is the definition of the minimal polynomial for \(A\), regarded as an \(n\times n\) matrix over the field \(F\)? We consider all monic polynomials with coefficients in \(F\) which annihilate \(A\), and we choose the one of least degree. If \(f\) is a monic polynomial over \(F\):
+\begin{equation}
+    f=x^k+\sum_{j=0}^{k-1}a_jx^j
+\end{equation}
+then \(f\left(A\right)=0\) merely says that we have a linear relation between the powers of \(A\):
+\begin{equation}
+    A^k+a_{k-1}A^{k-1}+\cdots+a_1A+a_0I=0.\label{eq:6.5}
+\end{equation}
+The degree of the minimal polynomial is the least positive integer \(k\) such that there is a linear relation of the form \eqref{eq:6.5} between the powers \(I\), \(A\), \(\ldots\), \(A^k\). Furthermore, by the uniqueness of the minimal polynomial, there is for that \(k\) one and only one relation of the form \eqref{eq:6.5}; i.e., once the minimal \(k\) is determined, there are unique scalars \(a_0\), \(\ldots\), \(a_{k-1}\) in \(F\) such that \eqref{eq:6.5} holds. They are the coefficients of the minimal polynomial.
+
+Now (for each \(k\)) we have in \eqref{eq:6.5} a system of \(n^2\) linear equations for the `unknowns' \(a_0\), \(\ldots\), \(a_{k-1}\). Since the entries of \(A\) lie in \(F\), the coefficients of the system of equations \eqref{eq:6.5} are in \(F\). Therefore, if the system has a solution with \(a_0\), \(\ldots\), \(a_{k-1}\) in \(F_1\) it has a solution with \(a_0\), \(\ldots\), \(a_{k-1}\) in \(F\). (See the end of Section~\ref{sect:1.4}.) It should now be clear that the two minimal polynomials are the same.
+
+What do we know thus far about the minimal polynomial for a linear operator on an \(n\)-dimensional space? Only that its degree does not exceed \(n^2\). That turns out to be a rather poor estimate, since the degree cannot exceed \(n\). We shall prove shortly that the operator is annihilated by its characteristic polynomial. First, let us observe a more elementary fact.
+
+\begin{theorem}\label{theorem:6.3}
+    Let \(T\) he a linear operator on an \(n\)-dimensional vector space \(V\) [or, let \(A\) be an \(n\times n\) matrix]. The characteristic and minimal polynomials for \(T\) [for \(A\)] have the same roots, except for multiplicities.
+\end{theorem}
+
+\begin{proof}
+    Let \(p\) be the minimal polynomial for \(T\). Let \(c\) be a scalar. What we want to show is that \(p\left(c\right)=0\) if and only if \(c\) is a characteristic value of \(T\).
+
+    First, suppose \(p\left(c\right)=0\). Then
+    \begin{equation*}
+        p=\left(x-c\right)q
+    \end{equation*}
+    where \(q\) is a polynomial. Since \(\deg q<\deg p\), the definition of the minimal polynomial \(p\) tells us that \(q\left(T\right)\ne0\). Choose a vector \(\beta\) such that \(q\left(T\right)\beta\ne0\). Let \(\alpha=q\left(T\right)\beta\). Then
+    \begin{align*}
+        0&=p\left(T\right)\beta\\
+         &=\left(T-cI\right)q\left(T\right)\beta\\
+         &=\left(T-cI\right)\alpha
+    \end{align*}
+    and thus, \(c\) is a characteristic value of \(T\).
+
+    Now, suppose that \(c\) is a characteristic value of \(T\), say, \(T\alpha=c\alpha\) with \(\alpha\ne0\). As we noted in a previous lemma,
+    \begin{equation*}
+        p\left(T\right)\alpha=p\left(c\right)\alpha.
+    \end{equation*}
+    Since \(p\left(T\right)=0\) and \(\alpha\ne0\), we have \(p\left(c\right)=0\).
+\end{proof}
+
+Let \(T\) be a diagonalizable linear operator and let \(c_1\), \(\ldots\), \(c_k\) be the distinct characteristic values of \(T\). Then it is easy to see that the minimal polynomial for \(T\) is the polynomial
+\begin{equation*}
+    p=\left(x-c_1\right)\cdots\left(x-c_k\right).
+\end{equation*}
+If \(\alpha\) is a characteristic vector, then one of the operators \(T-c_1I\), \(\ldots\), \(T-c_kI\) sends \(\alpha\) into \(0\). Therefore
+\begin{equation*}
+    \left(T-c_1I\right)\cdots\left(T-c_kI\right)\alpha=0
+\end{equation*}
+for every characteristic vector \(\alpha\). There is a basis for the underlying space which consists of characteristic vectors of \(T\); hence
+\begin{equation*}
+    p\left(T\right)=\left(T-c_1I\right)\cdots\left(T-c_kI\right)=0.
+\end{equation*}
+What we have concluded is this. If \(T\) is a diagonalizable linear operator, then the minimal polynomial for \(T\) is a product of distinct linear factors. As we shall soon see, that property characterizes diagonalizable operators.
+
+\begin{example}
+    Let's try to find the minimal polynomials for the operators in Examples~\ref{example:6.1}, \ref{example:6.2}, and \ref{example:6.3}. We shall discuss them in reverse order. The operator in Example~\ref{example:6.3} was found to be diagonalizable with characteristic polynomial
+    \begin{equation*}
+        f=\left(x-1\right)\left(x-2\right)^2.
+    \end{equation*}
+    From the preceding paragraph, we know that the minimal polynomial for \(T\) is
+    \begin{equation*}
+        p=\left(x-1\right)\left(x-2\right).
+    \end{equation*}
+    The reader might find it reassuring to verify directly that
+    \begin{equation*}
+        \left(A-I\right)\left(A-2I\right)=0.
+    \end{equation*}
+
+    In Example~\ref{example:6.2}, the operator \(T\) also had the characteristic polynomial \(f=\left(x-1\right)\left(x-2\right)^2\). But, this \(T\) is not diagonalizable, so we don't know that the minimal polynomial is \(\left(x-1\right)\left(x-2\right)\). What do we know about the minimal polynomial in this case? From Theorem~\ref{theorem:6.3} we know that its roots are \(1\) and \(2\), with some multiplicities allowed. Thus we search for \(p\) among polynomials of the form \(\left(x-1\right)^k\left(x-2\right)^l\), \(k\geqslant1\), \(l\geqslant1\). Try \(\left(x-1\right)\left(x-2\right)\):
+    \begin{align*}
+        \left(A-I\right)\left(A-2I\right)&=
+        \begin{bmatrix}
+            2 & 1 & -1 \\
+            2 & 1 & -1 \\
+            2 & 2 & -1
+        \end{bmatrix}
+        \begin{bmatrix}
+            1 & 1 & -1 \\
+            2 & 0 & -1 \\
+            2 & 2 & -2
+        \end{bmatrix}
+        \\
+                                         &=
+                                         \begin{bmatrix}
+                                             2 & 0 & -1 \\
+                                             2 & 0 & -1 \\
+                                             4 & 0 & -2
+                                         \end{bmatrix}
+                                         .
+    \end{align*}
+    Thus, the minimal polynomial has degree at least \(3\). So, next we should try either \(\left(x-1\right)^2\left(x-2\right)\) or \(\left(x-1\right)\left(x-2\right)^2\). The second, being the characteristic polynomial, would seem a less random choice. One can readily compute that \(\left(A-I\right)\left(A-2I\right)^2=0\). Thus the minimal polynomial for \(T\) is its characteristic polynomial.
+
+    In Example~\ref{example:6.1} we discussed the linear operator \(T\) on \(R^2\) which is represented in the standard basis by the matrix
+    \begin{equation*}
+        A=
+        \begin{bmatrix}
+            0 & -1 \\
+            1 & 0
+        \end{bmatrix}
+        .
+    \end{equation*}
+    The characteristic polynomial is \(x^2+1\), which has no real roots. To determine the minimal polynomial, forget about \(T\) and concentrate on \(A\). As a complex \(2\times2\) matrix, \(A\) has the characteristic values \(\iu\) and \(-\iu\). Both roots must appear in the minimal polynomial. Thus the minimal polynomial is divisible by \(x^2+1\). It is trivial to verify that \(A^2+I=0\). So the minimal polynomial is \(x^2+1\).
+\end{example}
+
+\begin{theorem}[Cayley--Hamilton]
+    Let \(T\) be a linear operator on a finite dimensional vector space \(V\). If \(f\) is the characteristic polynomial for \(T\), then \(f\left(T\right)=0\); in other words, the minimal polynomial divides the characteristic polynomial for \(T\).
+\end{theorem}
+
+\begin{proof}
+    Later on we shall give two proofs of this result independent of the one to be given here. The present proof, although short, may be difficult to understand. Aside from brevity, it has the virtue of providing an illuminating and far from trivial application of the general theory of determinants developed in Chapter~\ref{chap:5}.
+
+    Let \(K\) be the commutative ring with identity consisting of all polynomials in \(T\). Of course, \(K\) is actually a commutative algebra with identity over the scalar field. Choose an ordered basis \(\set{\alpha_1,\ldots,\alpha_n}\) for \(V\), and let \(A\) be the matrix which represents \(T\) in the given basis. Then
+    \begin{equation*}
+        T\alpha_i=\sum_{j=1}^nA_{ji}\alpha_j,\qquad1\leqslant i\leqslant n.
+    \end{equation*}
+    These equations may be written in the equivalent form
+    \begin{equation*}
+        \sum_{j=1}^n\left(\delta_{ij}T-A_{ji}I\right)\alpha_j=0,\qquad1\leqslant i\leqslant n.
+    \end{equation*}
+    Let \(B\) denote the element of \(K^{n\times n}\) with entries
+    \begin{equation*}
+        B_{ij}=\delta_{ij}T-A_{ji}I.
+    \end{equation*}
+    When \(n=2\)
+    \begin{equation*}
+        B=
+        \begin{bmatrix}
+            T-A_{11}I & -A_{21}I \\
+            -A_{12}I & T-A_{22}I \\
+        \end{bmatrix}
+    \end{equation*}
+    and
+    \begin{align*}
+        \det B&=\left(T-A_{11}I\right)\left(T-A_{22}I\right)-A_{12}A_{21}I\\
+              &=T^2-\left(A_{11}+A_{22}\right)T+\left(A_{11}A_{22}-A_{12}A_{21}\right)I\\
+              &=f\left(T\right)
+    \end{align*}
+    where \(f\) is the characteristic polynomial:
+    \begin{equation*}
+        f=x^2-\left(\tr A\right)x+\det A.
+    \end{equation*}
+    For the case \(n>2\), it is also clear that
+    \begin{equation*}
+        \det B=f\left(T\right)
+    \end{equation*}
+    since \(f\) is the determinant of the matrix \(xI-A\) whose entries are the polynomials
+    \begin{equation*}
+        \left(xI-A\right)_{ij}=\delta_{ij}x-A_{ji}.
+    \end{equation*}
+
+    We wish to show that \(f\left(T\right)=0\). In order that \(f\left(T\right)\) be the zero operator, it is necessary and sufficient that \(\left(\det B\right)\alpha_k=0\) for \(k=1,\ldots,n\). By the definition of \(B\), the vectors \(\alpha_1\), \(\ldots\), \(\alpha_n\) satisfy the equations
+    \begin{equation}
+        \sum_{j=1}^nB_{ij}\alpha_j=0,\qquad1\leqslant i\leqslant n.\label{eq:6.6}
+    \end{equation}
+    When \(n=2\), it is suggestive to write \eqref{eq:6.6} in the form
+    \begin{equation*}
+        \begin{bmatrix}
+            T-A_{11}I & -A_{21}I \\
+            -A_{12}I & T-A_{22}I
+        \end{bmatrix}
+        \begin{bmatrix}
+            \alpha_1 \\
+            \alpha_2
+        \end{bmatrix}
+        =
+        \begin{bmatrix}
+            0 \\
+            0
+        \end{bmatrix}
+        .
+    \end{equation*}
+    In this case, the classical adjoint, \(\adj B\) is the matrix
+    \begin{equation*}
+        \tilde{B}=
+        \begin{bmatrix}
+            T-A_{22}I & A_{21}I \\
+            A_{12}I & T-A_{11}I
+        \end{bmatrix}
+    \end{equation*}
+    and
+    \begin{equation*}
+        \tilde{B}B=
+        \begin{bmatrix}
+            \det B & 0 \\
+            0 & \det B
+        \end{bmatrix}
+        .
+    \end{equation*}
+    Hence, we have
+    \begin{align*}
+        \left(\det B\right)
+        \begin{bmatrix}
+            \alpha_1 \\
+            \alpha_2
+        \end{bmatrix}
+        &=\left(\tilde{B}B\right)
+        \begin{bmatrix}
+            \alpha_1 \\
+            \alpha_2
+        \end{bmatrix}
+        \\
+        &=\tilde{B}\left(B
+        \begin{bmatrix}
+            \alpha_1 \\
+            \alpha_2
+        \end{bmatrix}
+        \right)\\
+        &=
+        \begin{bmatrix}
+            0 \\
+            0
+        \end{bmatrix}
+        .
+    \end{align*}
+    In the general case, let \(\tilde{B}=\adj B\). Then by \eqref{eq:6.6}
+    \begin{equation*}
+        \sum_{j=1}^n\tilde{B}_{ki}B_{ij}\alpha_j=0
+    \end{equation*}
+    for each pair \(k\), \(i\), and summing on \(i\), we have
+    \begin{align*}
+        0&=\sum_{i=1}^n\sum_{j=1}^n\tilde{B}_{ki}B_{ij}\alpha_j\\
+         &=\sum_{j=1}^n\left(\sum_{i=1}^n\tilde{B}_{ki}B_{ij}\right)\alpha_j.
+    \end{align*}
+    Now \(\tilde{B}B=\left(\det B\right)I\), so that
+    \begin{equation*}
+        \sum_{i=1}^n\tilde{B}_{ki}B_{ij}=\delta_{kj}\det B.
+    \end{equation*}
+    Therefore
+    \begin{align*}
+        0&=\sum_{j=1}^n\delta_{kj}\left(\det B\right)\alpha_j\\
+         &=\left(\det B\right)\alpha_k,\qquad1\leqslant k\leqslant n.\qedhere
+    \end{align*}
+\end{proof}
+
+The Cayley--Hamilton theorem is useful to us at this point primarily because it narrows down the search for the minimal polynomials of various operators. If we know the matrix \(A\) which represents \(T\) in some ordered basis, then we can compute the characteristic polynomial \(f\). We know that the minimal polynomial \(p\) divides \(f\) and that the two polynomials have the same roots. There is no method for computing precisely the roots of a polynomial (unless its degree is small); however, if \(f\) factors
+\begin{equation}
+    f=\left(x-c_1\right)^{d_1}\cdots\left(x-c_k\right)^{d_k},\qquad c_1,\ldots,c_k~\text{distinct},d_i\geqslant1\label{eq:6.7}
+\end{equation}
+then
+\begin{equation}
+    p=\left(x-c_1\right)^{r_1}\cdots\left(x-c_k\right)^{r_k},\qquad1\leqslant r_j\leqslant d_j.\label{eq:6.8}
+\end{equation}
+That is all we can say in general. If \(f\) is the polynomial \eqref{eq:6.7} and has degree \(n\), then for every polynomial \(p\) as in \eqref{eq:6.8} we can find an \(n\times n\) matrix which has \(f\) as its characteristic polynomial and \(p\) as its minimal polynomial. We shall not prove this now. But, we want to emphasize the fact that the knowledge that the characteristic polynomial has the form \eqref{eq:6.7} tells us that the minimal polynomial has the form \eqref{eq:6.8}, and it tells us nothing else about \(p\).
+
+\begin{example}
+    % Let A be the 4X4 (rational) matrix '0 10 1' A = 1 0 1 0 1 0 1 0 1 0 1 0 The powers of A are easy to compute: 12 0 n A2 = 0 2 2 0 0 2 2 0 2 0 O' 2 0 2 A3 = '0 4 0 4“ 4 0 4 0 0 4 0 4 4 0 4 0 Thus A3 = 4A, i.e., if p = x3 — 4x = x(x + 2)(x — 2), then p(A) = 0. The minimal polynomial for A must divide p. That minimal polynomial is obviously not of degree 1, since that would mean that A was a scalar multiple of the identity. Hence, the candidates for the minimal polynomial are: p, x(x + 2)}x(x — 2), x2 — 4. The three quadratic polynomials can be eliminated because it is obvious at a glance that A2 X —2A, A2 X 2A, A2 ^ 41. Therefore p is the minimal polynomial for A. In particular 0, 2, and —2 are the characteristic values of A. One of the factors x, x — 2, x + 2 must be repeated twice in the characteristic polynomial. Evidently, rank (A) = 2. Consequently there is a two-dimensional space of charac¬ teristic vectors associated with the characteristic value 0. From Theorem 2, it should now be clear that the characteristic polynomial is x2(x2 — 4) and that A is similar over the field of rational numbers to the matrix "0 0 0 0“ 0 0 0 0 0 0 2 0 0 0 0 -2Sec. 6.3 Annihilating Polynomials 197 polynomial. We shall not prove this now. But, we want to emphasize the fact that the knowledge that the characteristic polynomial has the form (6-7) tells us that the minimal polynomial has the form (6-8), and it tells us nothing else about p. Example 5. Let A be the 4X4 (rational) matrix '0 10 1' A = 1 0 1 0 1 0 1 0 1 0 1 0 The powers of A are easy to compute: 12 0 n A2 = 0 2 2 0 0 2 2 0 2 0 O' 2 0 2 A3 = '0 4 0 4“ 4 0 4 0 0 4 0 4 4 0 4 0 Thus A3 = 4A, i.e., if p = x3 — 4x = x(x + 2)(x — 2), then p(A) = 0. The minimal polynomial for A must divide p. That minimal polynomial is obviously not of degree 1, since that would mean that A was a scalar multiple of the identity. Hence, the candidates for the minimal polynomial are: p, x(x + 2)}x(x — 2), x2 — 4. The three quadratic polynomials can be eliminated because it is obvious at a glance that A2 X —2A, A2 X 2A, A2 ^ 41. Therefore p is the minimal polynomial for A. In particular 0, 2, and —2 are the characteristic values of A. One of the factors x, x — 2, x + 2 must be repeated twice in the characteristic polynomial. Evidently, rank (A) = 2. Consequently there is a two-dimensional space of charac¬ teristic vectors associated with the characteristic value 0. From Theorem 2, it should now be clear that the characteristic polynomial is x2(x2 — 4) and that A is similar over the field of rational numbers to the matrix "0 0 0 0“ 0 0 0 0 0 0 2 0 0 0 0 -2
+\end{example}
+
+\subsection*{Exercises}
+
+\begin{enumerate}
+    \item % 1. Let V be a finite-dimensional vector space. What is the minimal polynomial for the identity operator on V? What is the minimal polynomial for the zero operator? 198 Elementary Canonical Forms Chap. 6 2. Let a, b, and c be elements of a field F, and let A be the following 3X3 matrix over F: A = "0 0 1 0 _0 1 Prove that the characteristic polynomial for A is x3 — ax2 — bx — c and that this is also the minimal polynomial for A. 3. Let A be the 4X4 real matrix " 1 1' 0 0" , -1 -1 0 0 -2-2 21* 1 1 —1 0_ Show that the characteristic polynomial for A is x2(x — l)2 and that it is also the minimal polynomial. 4. Is the matrix A of Exercise 3 similar over the field of complex numbers to a diagonal matrix? 5. Let V be an n-dimensional vector space and let T be a linear operator on V. Suppose that there exists some positive integer k so that Tk = 0. Prove that Tn = 0. 6. Find a 3 X 3 matrix for which the minimal polynomial is x2. 7. Let n be a positive integer, and let V be the space of polynomials over R which have degree at most n (throw in the 0-polynomial). Let D be the differentia¬ tion operator on V. What is the minimal polynomial for D? 8. Let P be the operator on R2 which projects each vector onto the x-axis, parallel to the ^/-axis: P(x, y) = (x, 0). Show that P is linear. What is the minimal poly¬ nomial for P? 9. Let A be an n X n matrix with characteristic polynomial Show that / = (x — ci)* • • • (x — Ck)dk. C\dx + • • • + ckdk = trace {A). 10. Let V be the vector space of n X n matrices over the field F. Let A be a fixed n X n matrix. Let T be the linear operator on V defined by T(B) = AB. Show that the minimal polynomial for T is the minimal polynomial for A. 11. Let A and B be n X n matrices over the field F. According to Exercise 9 of Section 6.1, the matrices AB and BA have the same characteristic values. Do they have the same characteristic polynomial? Do they have the same minimal polynomial?
+\end{enumerate}
