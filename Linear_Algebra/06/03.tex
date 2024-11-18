@@ -287,11 +287,59 @@ then
 That is all we can say in general. If \(f\) is the polynomial \eqref{eq:6.7} and has degree \(n\), then for every polynomial \(p\) as in \eqref{eq:6.8} we can find an \(n\times n\) matrix which has \(f\) as its characteristic polynomial and \(p\) as its minimal polynomial. We shall not prove this now. But, we want to emphasize the fact that the knowledge that the characteristic polynomial has the form \eqref{eq:6.7} tells us that the minimal polynomial has the form \eqref{eq:6.8}, and it tells us nothing else about \(p\).
 
 \begin{example}
-    % Let A be the 4X4 (rational) matrix '0 10 1' A = 1 0 1 0 1 0 1 0 1 0 1 0 The powers of A are easy to compute: 12 0 n A2 = 0 2 2 0 0 2 2 0 2 0 O' 2 0 2 A3 = '0 4 0 4“ 4 0 4 0 0 4 0 4 4 0 4 0 Thus A3 = 4A, i.e., if p = x3 — 4x = x(x + 2)(x — 2), then p(A) = 0. The minimal polynomial for A must divide p. That minimal polynomial is obviously not of degree 1, since that would mean that A was a scalar multiple of the identity. Hence, the candidates for the minimal polynomial are: p, x(x + 2)}x(x — 2), x2 — 4. The three quadratic polynomials can be eliminated because it is obvious at a glance that A2 X —2A, A2 X 2A, A2 ^ 41. Therefore p is the minimal polynomial for A. In particular 0, 2, and —2 are the characteristic values of A. One of the factors x, x — 2, x + 2 must be repeated twice in the characteristic polynomial. Evidently, rank (A) = 2. Consequently there is a two-dimensional space of charac¬ teristic vectors associated with the characteristic value 0. From Theorem 2, it should now be clear that the characteristic polynomial is x2(x2 — 4) and that A is similar over the field of rational numbers to the matrix "0 0 0 0“ 0 0 0 0 0 0 2 0 0 0 0 -2Sec. 6.3 Annihilating Polynomials 197 polynomial. We shall not prove this now. But, we want to emphasize the fact that the knowledge that the characteristic polynomial has the form (6-7) tells us that the minimal polynomial has the form (6-8), and it tells us nothing else about p. Example 5. Let A be the 4X4 (rational) matrix '0 10 1' A = 1 0 1 0 1 0 1 0 1 0 1 0 The powers of A are easy to compute: 12 0 n A2 = 0 2 2 0 0 2 2 0 2 0 O' 2 0 2 A3 = '0 4 0 4“ 4 0 4 0 0 4 0 4 4 0 4 0 Thus A3 = 4A, i.e., if p = x3 — 4x = x(x + 2)(x — 2), then p(A) = 0. The minimal polynomial for A must divide p. That minimal polynomial is obviously not of degree 1, since that would mean that A was a scalar multiple of the identity. Hence, the candidates for the minimal polynomial are: p, x(x + 2)}x(x — 2), x2 — 4. The three quadratic polynomials can be eliminated because it is obvious at a glance that A2 X —2A, A2 X 2A, A2 ^ 41. Therefore p is the minimal polynomial for A. In particular 0, 2, and —2 are the characteristic values of A. One of the factors x, x — 2, x + 2 must be repeated twice in the characteristic polynomial. Evidently, rank (A) = 2. Consequently there is a two-dimensional space of charac¬ teristic vectors associated with the characteristic value 0. From Theorem 2, it should now be clear that the characteristic polynomial is x2(x2 — 4) and that A is similar over the field of rational numbers to the matrix "0 0 0 0“ 0 0 0 0 0 0 2 0 0 0 0 -2
+    Let \(A\) be the \(4\times4\) (rational) matrix
+    \begin{equation*}
+        \begin{bmatrix}
+            0 & 1 & 0 & 1 \\
+            1 & 0 & 1 & 0 \\
+            0 & 1 & 0 & 1 \\
+            1 & 0 & 1 & 0
+        \end{bmatrix}
+        .
+    \end{equation*}
+    The powers of \(A\) are easy to compute:
+    \begin{align*}
+        A^2&=
+        \begin{bmatrix}
+            2 & 0 & 2 & 0 \\
+            0 & 2 & 0 & 2 \\
+            2 & 0 & 2 & 0 \\
+            0 & 2 & 0 & 2
+        \end{bmatrix}
+        \\
+        A^3&=
+        \begin{bmatrix}
+            0 & 4 & 0 & 4 \\
+            4 & 0 & 4 & 0 \\
+            0 & 4 & 0 & 4 \\
+            4 & 0 & 4 & 0
+        \end{bmatrix}
+        .
+    \end{align*}
+    Thus \(A^3=4A\), i.e., if \(p=x^3-4x=x\left(x+2\right)\left(x-2\right)\), then \(p\left(A\right)=0\). The minimal polynomial for \(A\) must divide \(p\). That minimal polynomial is obviously not of degree \(1\), since that would mean that \(A\) was a scalar multiple of the identity. Hence, the candidates for the minimal polynomial are: \(p\), \(x\left(x+2\right)\), \(x\left(x-2\right)\), \(x^2-4\). The three quadratic polynomials can be eliminated because it is obvious at a glance that \(A^2\ne-2A\), \(A^2\ne2A\), \(A^2\ne4I\). Therefore \(p\) is the minimal polynomial for \(A\). In particular \(0\), \(2\), and \(-2\) are the characteristic values of \(A\). One of the factors \(x\), \(x-2\), \(x+2\) must be repeated twice in the characteristic polynomial. Evidently, \(\rank\left(A\right)=2\). Consequently there is a two-dimensional space of characteristic vectors associated with the characteristic value \(0\). From Theorem~\ref{theorem:6.2}, it should now be clear that the characteristic polynomial is \(x^2\left(x^2-4\right)\) and that \(A\) is similar over the field of rational numbers to the matrix
+    \begin{equation}
+        \begin{bmatrix}
+            0 & 0 & 0 & 0 \\
+            0 & 0 & 0 & 0 \\
+            0 & 0 & 2 & 0 \\
+            0 & 0 & 0 & -2
+        \end{bmatrix}
+        .
+    \end{equation}
 \end{example}
 
 \subsection*{Exercises}
 
 \begin{enumerate}
-    \item % 1. Let V be a finite-dimensional vector space. What is the minimal polynomial for the identity operator on V? What is the minimal polynomial for the zero operator? 198 Elementary Canonical Forms Chap. 6 2. Let a, b, and c be elements of a field F, and let A be the following 3X3 matrix over F: A = "0 0 1 0 _0 1 Prove that the characteristic polynomial for A is x3 — ax2 — bx — c and that this is also the minimal polynomial for A. 3. Let A be the 4X4 real matrix " 1 1' 0 0" , -1 -1 0 0 -2-2 21* 1 1 —1 0_ Show that the characteristic polynomial for A is x2(x — l)2 and that it is also the minimal polynomial. 4. Is the matrix A of Exercise 3 similar over the field of complex numbers to a diagonal matrix? 5. Let V be an n-dimensional vector space and let T be a linear operator on V. Suppose that there exists some positive integer k so that Tk = 0. Prove that Tn = 0. 6. Find a 3 X 3 matrix for which the minimal polynomial is x2. 7. Let n be a positive integer, and let V be the space of polynomials over R which have degree at most n (throw in the 0-polynomial). Let D be the differentia¬ tion operator on V. What is the minimal polynomial for D? 8. Let P be the operator on R2 which projects each vector onto the x-axis, parallel to the ^/-axis: P(x, y) = (x, 0). Show that P is linear. What is the minimal poly¬ nomial for P? 9. Let A be an n X n matrix with characteristic polynomial Show that / = (x — ci)* • • • (x — Ck)dk. C\dx + • • • + ckdk = trace {A). 10. Let V be the vector space of n X n matrices over the field F. Let A be a fixed n X n matrix. Let T be the linear operator on V defined by T(B) = AB. Show that the minimal polynomial for T is the minimal polynomial for A. 11. Let A and B be n X n matrices over the field F. According to Exercise 9 of Section 6.1, the matrices AB and BA have the same characteristic values. Do they have the same characteristic polynomial? Do they have the same minimal polynomial?
+    \item
+    \item
+    \item
+    \item
+    \item
+    \item
+    \item
+    \item
+    \item
+    \item
+    \item
 \end{enumerate}
