@@ -1,0 +1,101 @@
+\startenvironment temp_env
+
+  \setuppagenumbering
+    [alternative=doublesided]
+
+  \defineconversionset
+    [frontpart:pagenumber]
+    []
+    [romannumerals]
+
+  \setupheadertexts
+    []
+  \setupheadertexts
+    [section]
+    [pagenumber]
+    [pagenumber]
+    [chapter]
+
+  \setupbodyfont
+    [newcomputermodern]
+
+  \defineresetset[default][0,0,1][1]
+
+  \setuphead
+    [sectionresetset=default]
+  \setuphead
+    [part]
+    [
+      bodypartlabel=part,
+      conversion=Romannumerals,
+      sectionsegments=part,
+      textstyle=ssbfd,
+      numberstyle=ssbfc,
+      placehead=yes,
+      after=\blank[4*line],
+      alternative=middle,
+      numbercommand=\groupedcommand{}{\blank[line]},
+    ]
+  \setuphead
+    [chapter]
+    [
+      bodypartlabel=chapter,
+      appendixlabel=appendix,
+      sectionsegments=chapter,
+      textstyle=ssbfc,
+      numberstyle=ssbfb,
+      after=\blank[4*line],
+      alternative=middle,
+      numbercommand=\groupedcommand{}{\blank[line]},
+    ]
+  \setuphead
+    [section]
+    [
+      sectionsegments=chapter:section,
+      style=ssbfa,
+    ]
+  \setuphead
+    [
+      title,
+      subject,
+    ]
+    [incrementnumber=list]
+
+  \setuplabeltext
+    [
+      part=Part~,
+      chapter=Chapter~,
+      appendix=Appendix~,
+    ]
+
+  \setupsectionblock
+    [
+      frontpart,
+      bodypart,
+    ]
+    [
+      before=
+        \setupuserpagenumber
+          [number=1]
+    ]
+
+  \setupcombinedlist
+    [content]
+    [list={part,chapter,section,title,subject}]
+
+  \setupinteraction
+    [
+      state=start,
+      style=,
+    ]
+
+  \placebookmarks
+    [all]
+
+  \setupindenting
+    [
+      yes,
+      medium,
+    ]
+
+\stopenvironment
